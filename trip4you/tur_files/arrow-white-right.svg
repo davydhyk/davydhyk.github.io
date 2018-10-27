@@ -1,0 +1,12 @@
+<svg width="41" height="6" viewBox="0 0 41 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Union</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(2542 447)">
+<g id="Union">
+<use xlink:href="#path0_fill" transform="translate(-2542 -447)" fill="#FFFFFF"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 35 6L 40.2 3L 35 0L 35 2L 0 2L 0 4L 35 4L 35 6Z"/>
+</defs>
+</svg>
