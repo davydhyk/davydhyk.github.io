@@ -68,18 +68,30 @@ select {
           align-items: center;
 }
 
+.great-price-title .select label {
+  position: relative;
+}
+
 .great-price-title .select span {
   color: #fff;
   font-size: 0.75em;
   letter-spacing: 0.05em;
 }
 
+.great-price-title .select img {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+}
+
 .great-price-title .select select {
-  margin-right: 1em;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  padding: 0 1.428em;
+  padding: 0 2.428em 0 1.428em;
   font-size: 0.875em;
   line-height: 1.714;
   letter-spacing: 0.05em;
@@ -247,6 +259,7 @@ select {
 }
 
 .search-block .filter-select label {
+  position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -255,8 +268,17 @@ select {
           align-items: center;
 }
 
+.search-block .filter-select label img {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+}
+
 .search-block .filter-select select {
-  margin: 0 1.4em 0 1.2em;
+  margin: 0 0em 0 1.2em;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -266,7 +288,7 @@ select {
   color: #fff;
   background-color: #77a9d7;
   height: 1.571em;
-  padding: 0 1.428em;
+  padding: 0 2.828em 0 1.428em;
   border: none;
   border-radius: 0.785em;
 }
@@ -324,11 +346,24 @@ select {
   margin-right: 0;
 }
 
+.params-block .first-line .select label {
+  position: relative;
+}
+
 .params-block .first-line .select span {
   font-size: 0.75em;
   letter-spacing: 0.05em;
   color: #2a2a2a;
   opacity: 0.5;
+}
+
+.params-block .first-line .select img {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .params-block .first-line .select select {
@@ -341,11 +376,11 @@ select {
   color: #7c9b29;
   height: 1.571em;
   border-radius: 0.7855em;
-  padding: 0 1.3em;
+  padding: 0 2.3em 0 1.3em;
   text-align: center;
   border: none;
   background-color: rgba(131, 197, 60, 0.5);
-  margin: 0 1em 0 1.42em;
+  margin: 0 0 0 1.42em;
 }
 
 .params-block .second-line {
@@ -422,9 +457,18 @@ select {
           box-shadow: 0px 19px 38px 0px rgba(221, 138, 132, 0.3);
 }
 
+.hotels-item .image a:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .hotels-item .image img {
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
   min-width: 100%;
   min-height: 100%;
+  -webkit-transition: 8s;
+  transition: 8s;
 }
 
 .hotels-item .image .location {
@@ -474,10 +518,13 @@ select {
 
 .hotels-name {
   margin-top: 1.928em;
-  color: #cccccc;
   font-size: 0.875em;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+.hotels-name a {
+  color: #ccc;
 }
 
 .hotels-name .name {
@@ -643,8 +690,8 @@ select {
     height: 95px;
   }
   .search-block .filter-select select {
-    margin: 0 0.5em 0 0.5em;
-    padding: 0 1.1em;
+    margin: 0 0em 0 0.5em;
+    padding: 0 2.3em 0 1.1em;
   }
   .great-price {
     font-size: 13px;
@@ -660,8 +707,8 @@ select {
     font-size: 13px;
   }
   .params-block .first-line .select select {
-    padding: 0 1.1em;
-    margin: 0 0.5em;
+    padding: 0 2.3em 0 1.1em;
+    margin: 0 0 0 0.5em;
   }
   .hotels {
     font-size: 13px;
