@@ -4,6 +4,10 @@ jQuery(document).ready(function () {
     $(this).prev().slideToggle(200);
   });
 
+  $('.select-block').click(function () {
+    $(this).next().slideToggle(200);
+  });
+
   /* scroll */
 
   var sticky = UIkit.sticky(".header", {

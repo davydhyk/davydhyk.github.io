@@ -285,6 +285,7 @@ select {
 }
 
 .search-block .filter-select .label select {
+  cursor: pointer;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -367,6 +368,7 @@ select {
 }
 
 .search-block .filter-select .select-block {
+  cursor: pointer;
   margin: 0 1.4em 0 1.2em;
   font-size: 0.875em;
   letter-spacing: 0.05em;
