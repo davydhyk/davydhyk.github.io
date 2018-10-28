@@ -6,6 +6,9 @@ select
 
 .gbold
   font-family: "GilroyBold", sans-serif
+
+.gmed
+  font-family: 'GilroyMedium', sans-serif
   
 .new-results
   position: relative
@@ -54,6 +57,7 @@ select
         transform: translateY(-50%)
         pointer-events: none
       select
+        @extend .gmed
         appearance: none
         padding: 0 2.428em 0 1.428em
         font-size: 0.875em
@@ -124,6 +128,14 @@ select
     display: flex
     justify-content: space-between
   .filter
+    &:not(:last-child) .label img
+      cursor: pointer
+    &:last-child .label img
+      position: absolute
+      right: 5px
+      top: 50%
+      transform: translateY(-50%)
+      pointer-events: none
     &-name
       display: flex
       align-items: flex-end
@@ -133,8 +145,7 @@ select
       .image
         position: relative
         img
-          position: relative
-          top: -2px
+          margin-top: -2.5px
           margin-left: 10px
           &:hover + .tooltip
             opacity: 1
@@ -155,19 +166,31 @@ select
       > img
         width: 1.25em
         height: 1.25em
-      > label
+      .label
         display: inline-flex
         align-items: center
         position: relative
-        img
-          cursor: pointer
+        select
+          @extend .gmed
+          appearance: none
+          margin: 0 0em 0 1.2em
+          font-size: 0.875em
+          letter-spacing: 0.05em
+          line-height: 1.571em
+          color: #fff
+          background-color: #77a9d7
+          height: 1.571em
+          padding: 0 2.828em 0 1.428em
+          border: none
+          border-radius: 0.785em
       .select-values
+        display: none
         padding: 5px
         position: absolute
         left: 50%
         top: 110%
         background-color: #3c84c5
-        width: 185px
+        width: 12em
         z-index: 1
         transform: translateX(-50%)
         box-shadow: 0px 19px 38px 0px rgba(4, 107, 184, 0.3)
@@ -178,23 +201,27 @@ select
         label
           display: inline-block
           color: #fff
-          width: 55px
+          width: 3.437em
           span
             display: inline-block
-            padding-left: 22px
+            padding-left: 1.375em
             position: relative
+            i
+              font-size: 0.8em
+              color: #ffca6d
+              vertical-align: top
             &::before
               content: ''
-              width: 12px
-              height: 12px
+              width: 0.75em
+              height: 0.75em
               position: absolute
               left: 0
               top: 50%
               transform: translateY(-50%)
               background-color: #fff
             &::after
-              width: 11px
-              height: 3px
+              width: 0.687em
+              height: 0.18em
               position: absolute
               left: 0
               top: 25%
@@ -255,6 +282,7 @@ select
         transform: translateY(-50%)
         pointer-events: none
       select
+        @extend .gmed
         appearance: none
         font-size: 0.875em
         letter-spacing: 0.05em
@@ -447,9 +475,14 @@ select
   .search-block 
     font-size: 13px
     height: 95px
-    .filter-select .select-block
-      margin: 0 0.5em 0 0.5em
-      padding: 0 1.1em
+    .filter-select 
+      .label
+        .select-block
+          margin: 0 0.5em 0 0.5em
+          padding: 0 1.1em
+        select
+          margin: 0 0 0 0.5em
+          padding: 0 1.5em 0 1.1em
   .great-price
     font-size: 13px
     &-title
@@ -482,6 +515,12 @@ select
         width: 9em
       .text
         font-size: 1.4em
+  .search-block 
+    .filter-select 
+      .label 
+        .select-block
+          margin: 0 0.2em 0 0.3em
+          padding: 0 1em
   .params-block
     .first-line 
       .select
@@ -497,6 +536,8 @@ select
         margin-left: 0.6em
 
 @media screen and (max-width: 767px)
+  .search-block
+    padding: 1em 0.8em 1em 0.8em
   .great-price
     width: 100%
     font-size: 15px

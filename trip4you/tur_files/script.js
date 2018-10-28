@@ -1,5 +1,9 @@
 jQuery(document).ready(function () {
 
+  $('.select-values + img').click(function () {
+    $(this).prev().slideToggle(200);
+  });
+
   /* scroll */
 
   var sticky = UIkit.sticky(".header", {
