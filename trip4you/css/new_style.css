@@ -259,7 +259,6 @@ select {
 }
 
 .search-block .filter-select label {
-  position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -268,17 +267,8 @@ select {
           align-items: center;
 }
 
-.search-block .filter-select label img {
-  position: absolute;
-  right: 5px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  pointer-events: none;
-}
-
 .search-block .filter-select select {
-  margin: 0 0em 0 1.2em;
+  margin: 0 1.4em 0 1.2em;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -288,7 +278,7 @@ select {
   color: #fff;
   background-color: #77a9d7;
   height: 1.571em;
-  padding: 0 2.828em 0 1.428em;
+  padding: 0 1.428em;
   border: none;
   border-radius: 0.785em;
 }
@@ -690,8 +680,8 @@ select {
     height: 95px;
   }
   .search-block .filter-select select {
-    margin: 0 0em 0 0.5em;
-    padding: 0 2.3em 0 1.1em;
+    margin: 0 0.5em 0 0.5em;
+    padding: 0 1.1em;
   }
   .great-price {
     font-size: 13px;
@@ -798,6 +788,9 @@ select {
 }
 
 @media screen and (max-width: 479px) {
+  .new-results {
+    margin-top: -10px;
+  }
   .new-results > div {
     max-width: 100%;
   }
