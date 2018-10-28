@@ -155,12 +155,55 @@ select
       > img
         width: 1.25em
         height: 1.25em
-      label
+      > label
         display: inline-flex
         align-items: center
-      select
+        position: relative
+        img
+          cursor: pointer
+      .select-values
+        padding: 5px
+        position: absolute
+        left: 50%
+        top: 110%
+        background-color: #3c84c5
+        width: 185px
+        z-index: 1
+        transform: translateX(-50%)
+        box-shadow: 0px 19px 38px 0px rgba(4, 107, 184, 0.3)
+        input
+          display: none
+          &:checked + span::after
+            content: ''
+        label
+          display: inline-block
+          color: #fff
+          width: 55px
+          span
+            display: inline-block
+            padding-left: 22px
+            position: relative
+            &::before
+              content: ''
+              width: 12px
+              height: 12px
+              position: absolute
+              left: 0
+              top: 50%
+              transform: translateY(-50%)
+              background-color: #fff
+            &::after
+              width: 11px
+              height: 3px
+              position: absolute
+              left: 0
+              top: 25%
+              transform: translateY(-50%) rotate(-45deg)
+              border: 3px solid #77a9d7
+              border-top-color: transparent
+              border-right-color: transparent
+      .select-block
         margin: 0 1.4em 0 1.2em
-        appearance: none
         font-size: 0.875em
         letter-spacing: 0.05em
         line-height: 1.571em
@@ -404,7 +447,7 @@ select
   .search-block 
     font-size: 13px
     height: 95px
-    .filter-select select
+    .filter-select .select-block
       margin: 0 0.5em 0 0.5em
       padding: 0 1.1em
   .great-price
