@@ -1,11 +1,7 @@
 jQuery(document).ready(function () {
 
-  $('.select-values + img').click(function () {
-    $(this).prev().slideToggle(200);
-  });
-
-  $('.select-block').click(function () {
-    $(this).next().slideToggle(200);
+  $('.select-block, .select-values + img').click(function () {
+    $(this).parent().find('.select-values').slideToggle(200);
   });
 
   /* scroll */
