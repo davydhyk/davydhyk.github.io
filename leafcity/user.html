@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+  <meta charset="utf-8">
+	<title>LeafCity</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <meta name="theme-color" content="#00b484">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <p>Змініть орієнтацію на книжну</p>
+  <section class="user">
+    <div class="user-tab">
+      <img src="img/leaf-dark.png" alt="">
+      <span>Додати місце</span>
+    </div>
+    <div class="slider-nav">
+      <div class="slider-nav-item">
+        <img src="img/map.png" alt="" class="passive">
+        <img src="img/map-a.png" alt="" class="active">
+      </div>
+      <div class="slider-nav-item">
+        <img src="img/profile.png" alt="" class="passive">
+        <img src="img/profile-a.png" alt="" class="active">
+      </div>
+      <div class="slider-nav-item">
+        <img src="img/bell.png" alt="" class="passive">
+        <img src="img/bell-a.png" alt="" class="active">
+      </div>
+    </div>
+    <div class="slider">
+      <div class="map">
+        <div id="map"></div>
+        <div class="btns">
+          <div class="add-leaf">Додати місце</div>
+          <div class="add-fire"><img src="img/fire.png" alt=""></div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile-info">
+          <div class="profile-photo">
+            <!-- <img src="img/avatar.png" alt=""> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG2I3uy1WnkiNMJMwkqbyrQ0aFYWd5jzs"></script>
+  <script>
+    var map;
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 50.617953144089846, lng: 26.258654594421387},
+      zoom: 17,
+      disableDefaultUI: true
+    });
+  </script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
