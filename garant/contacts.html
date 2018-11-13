@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+	<title>Гарант</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <meta name="theme-color" content="#000">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/fontawesome.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <nav class="header-menu">
+    <div class="container">
+      <div class="menu-main-container">
+        <ul>
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-logo">
+        <a href="#"><img src="img/logo.png" alt=""></a>
+      </div>
+      <div class="header-text">ОСАГО и КАСКО <br>без ТО</div>
+      <div class="header-calc">
+        <a href="#">Калькулятор</a>
+      </div>
+      <div class="header-phone">
+        <a href="tel:89997778888"><img src="img/phone.png" alt="">8 (999) 777 8888</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="breadcrumbs">
+    <div class="container">
+      <ul>
+        <li><a href="#">главная</a></li>
+        <li><span class="sep">></span></li>
+        <li><span>контакты</span></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="contacts">
+    <div class="container">
+      <h2>наши контакты</h2>
+      <div class="contacts-wrap">
+        <div class="contacts-text">
+          <p>ООО «ГАРАНТ АВТОСТРАХОВАНИЯ»</p>
+          <p>АДРЕС: <span>201092, Москва, Красная площадь, 1</span></p>
+          <p>ТЕЛЕФОН: <span><a href="tel:89997778888">8 999 777 8888</a></span></p>
+          <p>ЭЛЕКТРОННАЯ ПОЧТА: <span><a href="mailto:garantautos@gmail.com">garantautos@gmail.com</a></span></p>
+        </div>
+        <div class="contacts-map" id="map"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-menu">
+        <ul>
+          <li><a href="#">лицензия</a></li>
+          <li><a href="#">карта сайта</a></li>
+          <li><a href="#">faq</a></li>
+        </ul>
+      </div>
+      <div class="footer-copy">copyright 2018 гарант автострахования</div>
+      <div class="footer-contacts">
+        <a href="tel:89997778888" class="footer-phone"><img src="img/phone.png" alt="">8 (999) 777 8888</a>
+        <a href="mailto:garantautos@gmail.com" class="footer-mail"><img src="img/mail.png" alt="">garantautos@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG2I3uy1WnkiNMJMwkqbyrQ0aFYWd5jzs"></script>
+  <script>
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 55.755360, lng: 37.617830},
+      zoom: 16,
+      disableDefaultUI: true
+    });
+    var marker = new google.maps.Marker({
+      position: {lat: 55.755360, lng: 37.617830},
+      map: map,
+      title: 'ООО «ГАРАНТ АВТОСТРАХОВАНИЯ»',
+      animation: google.maps.Animation.DROP,
+      icon: 'img/loc-icon.png'
+    });
+  </script>
+</body>
+</html>
