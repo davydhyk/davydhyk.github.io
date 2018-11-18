@@ -1,7 +1,7 @@
 $(function () {
   $(window).on('resize', function () {
     $('body').css('height', window.innerHeight);
-    $('.slider').height(calcheight($('.slider')));
+    $('.slider').height(calcheight());
   });
   $(window).trigger('resize');
   
@@ -9,19 +9,20 @@ $(function () {
     slidesToShow: 3,
     arrows: false,
     focusOnSelect: true,
-    asNavFor: $('.slider')
+    asNavFor: $('.slider'),
+    initialSlide: 2
   });
   
   $('.slider').slick({
     slidesToShow: 1,
     arrows: false,
-    asNavFor: $('.slider-nav')
+    asNavFor: $('.slider-nav'),
+    initialSlide: 2
   });
 
-  $('.slider').height(calcheight($('.slider')));
+  $('.slider').height(calcheight());
 })
 
 function calcheight() {
   return window.innerHeight - $('.slider-nav').height() - $('.user-tab').height();
-  console.log(window.innerHeight, $('.slider-nav').height(), $('.user-tab').height());
 }
