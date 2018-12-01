@@ -31,4 +31,9 @@ $(function () {
   });
 
   $('.htl-rev-tabs').tabulous();
+
+  $('.htl-map-line span').click(function() {
+    $(this).toggleClass('active');
+    $('.htl-map-wrap').slideToggle();
+  });
 })
