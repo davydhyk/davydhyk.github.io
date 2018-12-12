@@ -36,4 +36,17 @@ $(function () {
     $(this).toggleClass('active');
     $('.htl-map-wrap').slideToggle();
   });
+
+  $('.htl-slider-item img').click(function () {
+    $('.htl-img img').attr('src', $(this).attr('src'));
+  });
+
+  $('.htl-price a').click(function(e) {
+    e.preventDefault();
+    $('.cld-price').slideDown();
+    $('body, html').animate({
+      scrollTop: $('.cld-price').offset().top - $('.filter-block.sticky').height() - 40
+    }, 500);
+    if ($('.cld-chart > div').width() < $('.container').width()) $(window).trigger('resize');
+  })
 })
