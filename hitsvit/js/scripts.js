@@ -45,8 +45,9 @@ $(function () {
     e.preventDefault();
     $('.cld-price').slideDown();
     $('body, html').animate({
-      scrollTop: $('.cld-price').offset().top - $('.filter-block.sticky').height() - 40
+      scrollTop: $('.cld-price').offset().top - ((window.innerWidth >= 768) ? $('.filter-block.sticky').height() : 0) - 40
     }, 500);
-    if ($('.cld-chart > div').width() < $('.container').width()) $(window).trigger('resize');
+    // if ($('.cld-chart > div').width() < $('.container').width())
+    $(window).trigger('resize');
   })
 })
