@@ -10,14 +10,14 @@ $(function () {
     arrows: false,
     focusOnSelect: true,
     asNavFor: $('.slider'),
-    // initialSlide: 2
+    initialSlide: 1
   });
   
   $('.slider').slick({
     slidesToShow: 1,
     arrows: false,
     asNavFor: $('.slider-nav'),
-    // initialSlide: 2
+    initialSlide: 1
   });
 
   $('.slider').height(calcheight());
