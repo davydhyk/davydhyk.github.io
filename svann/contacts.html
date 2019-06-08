@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+	<title>SVANN</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Template Basic Images Start -->
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#f7f7f7">
+	<!-- Custom Browsers Color End -->
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header class="header none">
+    <div class="container">
+      <div class="header-left">
+        <a href="#"><img src="img/logo.png" alt=""></a>
+        <span>Ремонт ванных комнат и санузлов</span>
+        <a href="#" class="menu-btn"><span></span></a>
+      </div>
+      <div class="header-right">
+        <div class="header-line">
+          <div class="header-line-item address">
+            <img src="img/loc.png" alt="">
+            <a href="#map"><b>Санкт-Петербург,</b><br>Шоссе Революции 88ж</a>
+          </div>
+          <div class="header-line-item mail">
+            <img src="img/contact.png" alt="">
+            <a href="mailto:S-vannspb.mail.ru"><b>Напишите нам</b><br>S-vannspb.mail.ru</a>
+          </div>
+          <div class="header-line-item call">
+            <img src="img/call.png" alt="">
+            <a href="tel:88126423714"><b>8 (812) 642 37 14</b><br>заказать звонок</a>
+          </div>
+          <div class="header-line-item calc">
+            <a href="#"><b>Рассчитать<br>стоимость</b></a>
+          </div>
+        </div>
+        <div class="header-menu">
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Наши роботы</a></li>
+            <li><a href="#">Прайс лист</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <section class="bg-map">
+    <div id="map"></div>
+  </section>
+  
+  <section class="contact-title">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-header-small">Наши</div>
+        <div class="section-header-big">контакты</div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="contact">
+    <div class="container">
+      <div class="contact-list">
+        <div class="contact-list-item">
+          <div class="contact-list-image"><img src="img/loc.png" alt=""></div>
+          <div class="contact-list-text">
+            <div class="title">Санкт-Петербург,</div>
+            <div class="descr">м. Ладожская Шоссе Революции 88ж</div>
+          </div>
+        </div>
+        <div class="contact-list-item">
+          <div class="contact-list-image"><img src="img/contact.png" alt=""></div>
+          <a href="mailto:S-vannspb.mail.ru"  class="contact-list-text">
+            <div class="title">Напишите нам</div>
+            <div class="descr">S-vannspb.mail.ru</div>
+          </a>
+        </div>
+        <div class="contact-list-item">
+          <div class="contact-list-image"><img src="img/phone.png" alt=""></div>
+          <div class="contact-list-text">
+            <a href="tel:88126423714" class="title">8 (812) 642 37 14</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form action="">
+          <div class="contact-form-wrap">
+            <span>
+              <p>Ваше Имя</p>
+              <input type="text" placeholder="Введите имя">
+            </span>
+            <span>
+              <p>Ваш email</p>
+              <input type="email" placeholder="Введите email">
+            </span>
+            <span>
+              <p>Ваш телефон</p>
+              <input type="tel" placeholder="Введите телефон">
+            </span>
+            <span>
+              <p>Вашe сообщение</p>
+              <textarea placeholder="Введите сообщение"></textarea>
+            </span>
+            <div class="submit">
+              <input type="submit" value="Задать вопрос">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+	<script src="js/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG2I3uy1WnkiNMJMwkqbyrQ0aFYWd5jzs"></script>
+	<script>
+    var map;
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 8,
+      disableDefaultUI: true
+    });
+  </script>
+</body>
+</html>

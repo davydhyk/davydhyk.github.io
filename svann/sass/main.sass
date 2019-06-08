@@ -1,0 +1,1039 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+b, strong
+	font-weight: bold
+
+body
+  padding: 0
+  margin: 0
+  background: #f7f7f7 url(../img/body-bg.png) top right no-repeat
+  line-height: 1.2
+  
+*, *::after, *::before
+  box-sizing: border-box
+  
+.container
+  width: 100%
+  margin: 0 auto
+  max-width: 1190px
+  
+.header
+  background: linear-gradient(to right, #fff, #fff 60%, rgba(0, 0, 0, 0) 60%)
+  &.none
+    background: linear-gradient(to right, #f7f7f7, #f7f7f7 60%, rgba(0, 0, 0, 0) 60%)
+  .container
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    max-width: 1226px
+    background: linear-gradient(#f7f7f7, #f7f7f7) right top/15px 100% no-repeat
+    padding: 0 15px
+  &-left
+    padding-top: 25px
+    display: flex
+    align-items: center
+    min-height: 52px
+    span
+      margin-left: 3.2em
+      font-size: 12px
+      line-height: 1.5
+      letter-spacing: 0.05em
+      max-width: 13.33em
+  &-right
+    padding-top: 25px
+    background-color: #f7f7f7
+  &-line
+    display: flex
+    min-height: 52px
+    &-item
+      display: flex
+      align-items: center
+      font-size: 12px
+      &.address
+        margin-left: 6.6em
+        img
+          margin-right: 2.5em
+      &.mail
+        margin-left: 2.1em
+        img
+          margin-right: 2.17em
+      &.call
+        margin-left: 3.5em
+        img
+          margin-right: 2.5em
+        a
+          color: $accent
+      &.calc
+        margin-left: 3.9em
+        a
+          color: $accent
+          text-align: center
+          position: relative
+          padding: 0 8px
+          &::after, &::before
+            position: absolute
+            content: ''
+            background-color: $accent
+            width: 3px
+            height: 3px
+            top: 50%
+            margin-top: -1.5px
+          &::after
+            right: 0
+          &:before
+            left: 0
+      a
+        color: $text
+        text-decoration: none
+        line-height: 1.5
+        letter-spacing: 0.03em
+        b
+          font-family: oswald
+          text-transform: uppercase
+  &-menu
+    display: flex
+    justify-content: flex-end
+    font-size: 14px
+    ul
+      list-style: none
+      display: flex
+      padding: 0
+      margin: 17px 0
+      li
+        margin-left: 2.8em
+        &.current-menu-item
+          a
+            color: $accent
+        a
+          text-decoration: none
+          color: $text
+          line-height: 1.71
+          letter-spacing: 0.03em
+          transition: 0.2s
+          &:hover
+            color: $accent
+          
+.front
+  font-size: 14px
+  position: relative
+  &-bg
+    background-image: url(../img/main-bg.jpg)
+    background-size: cover
+    position: absolute
+    max-width: calc(1190px + ((100% - 1190px) / 2))
+    background-position: right
+    width: 100%
+    height: 100%
+    z-index: -1
+    left: 0
+  .container
+    padding-top: 4.71em
+    padding-bottom: 25em
+  &-title
+    padding-left: 3.29em
+    margin-bottom: 1.8em
+    color: #fff
+    font-family: oswald
+    font-weight: 700
+    text-transform: uppercase
+    position: relative
+    background-image: url(../img/figure.png)
+    background-size: auto 100%
+    background-repeat: no-repeat
+    &-big
+      line-height: 1
+      font-size: 5.11em
+      margin-top: 7px
+      letter-spacing: -0.03em
+      margin-left: -0.04em
+    &-small
+      letter-spacing: -0.03em
+      line-height: 1
+      font-size: 1.29em
+  &-content
+    display: flex
+  &-text
+    margin-left: 10.05%
+    color: #fff
+    &-time
+      font-family: oswald
+      font-weight: 700
+      font-size: 1.29em
+      text-transform: uppercase
+      line-height: 1
+      letter-spacing: -0.03em
+    &-title
+      font-family: oswald
+      font-weight: 700
+      font-size: 5.11em
+      text-transform: uppercase
+      max-width: 7.13em
+      letter-spacing: -0.03em
+    &-descr
+      margin-top: 1.79em
+      opacity: 0.5
+      font-size: 1em
+      line-height: 1.75
+      max-width: 32.86em
+      letter-spacing: 0.028em
+    &-btn
+      margin-top: 4.25em
+      margin-left: 0.17em
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      width: 15em
+      height: 3.5em
+      border: 1px solid #fff
+      font-size: 0.86em
+      text-transform: uppercase
+      color: #fff
+      font-weight: 600
+      text-decoration: none
+      letter-spacing: 0.1em
+      transition: 0.2s
+      &:hover
+        opacity: 0.8
+      
+.section-header
+  font-size: 12px
+  padding: 0 3.83em
+  text-transform: uppercase
+  color: $text
+  font-family: oswald
+  font-weight: 700
+  letter-spacing: -0.03em
+  line-height: 1
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  margin-bottom: 4.87em
+  &-small
+    font-size: 1em
+  &-big
+    margin-top: 0.3em
+    font-size: 2em
+    letter-spacing: -0.03em
+    position: relative
+    &::after
+      content: ''
+      background-color: $accent
+      height: 0.21em
+      width: 0.21em
+      position: absolute
+      bottom: 0
+      right: -0.42em
+      
+.home-content
+  font-size: 14px
+  position: relative
+  z-index: 1
+  .container
+    background-color: #fff
+    padding-top: 6.94em
+    margin-top: -17.86em
+    position: relative
+    
+.discont
+  position: absolute
+  top: 0
+  right: 0
+  transform: translateY(-54.9%)
+  &::after
+    position: absolute
+    content: ''
+    background-image: url(../img/shadow.png)
+    background-size: 100% 100%
+    left: 50%
+    bottom: 0
+    transform: translateX(-50%) translateY(50%)
+    width: 20.1em
+    height: 5.53em
+  &-content
+    background-color: #fff
+    position: relative
+    z-index: 1
+    width: 20.1em
+    height: 18.83em
+    padding: 1.57em
+  &-accent
+    font-family: oswald
+    text-transform: uppercase
+    font-size: 0.86em
+    font-weight: 700
+    letter-spacing: -0.03em
+    color: $accent
+    line-height: 1
+  &-text
+    margin-top: 0.4em
+    a
+      display: block
+      font-family: oswald
+      font-size: 1.71em
+      font-weight: 700
+      text-decoration: none
+      text-transform: uppercase
+      line-height: 1.2em
+      letter-spacing: -0.03em
+      color: $text
+      img
+        margin-left: 0.8em
+        margin-bottom: 0.4em
+        transform: translateY(50%)
+  &-img
+    position: absolute
+    right: 2.21em
+    bottom: -2.07em
+    img
+      width: 20.86em
+      height: auto
+    
+.capability
+  &-preview
+    &-item
+      display: none
+      justify-content: space-between
+      &.active
+        display: flex
+      .image
+        width: 49.1%
+        img
+          max-width: 100%
+      .content
+        width: 49.1%
+        padding-right: 46px
+        .title
+          letter-spacing: 0.02em
+          font-family: oswald
+          font-weight: 700
+          text-transform: uppercase
+          margin-bottom: 3.57em
+        ul
+          margin: 0
+          list-style: none
+          padding-left: 0
+          li
+            padding-left: 2em
+            position: relative
+            line-height: 1.43
+            margin-bottom: 10px
+            letter-spacing: 0.026em
+            &::before
+              content: ''
+              position: absolute
+              height: 5px
+              width: 5px
+              background-color: $accent
+              border-radius: 50%
+              left: 0
+              top: calc(1.43em / 2)
+              transform: translateY(-50%)
+  &-list
+    padding: 0 3.29em
+    display: flex
+    flex-wrap: wrap
+    &-item
+      display: inline-flex
+      align-items: flex-start
+      flex: 0 0 25%
+      cursor: pointer
+      margin-bottom: 3.79em
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        right: 20%
+        width: 0
+        height: 0
+        border-width: 6px 3px
+        border-style: solid
+        border-color: transparent
+        border-top-color: $accent
+      &.active, &:hover
+        .hover
+          display: block
+        .normal
+          display: none
+        .text
+          .title
+            color: $accent
+      .hover
+        display: none
+      .text
+        letter-spacing: 0.03em
+        line-height: 1
+        margin-left: 2.5em
+        .title
+          font-family: oswald
+          font-weight: 700
+          text-transform: uppercase
+          transition: 0.2s
+        p
+          line-height: 1.43
+          margin-top: 0.36em
+          margin-bottom: 0
+        
+.how
+  margin-top: 6.26em
+  &-content
+    display: flex
+    justify-content: flex-end
+    position: relative
+    padding: 0 3em
+    > img
+      position: absolute
+      left: 0vw
+      top: 0vw
+      width: 50%
+    &-title
+      font-family: oswald
+      font-weight: 700
+      line-height: 1.43
+      letter-spacing: 0.03em
+      max-width: 16.93em
+      text-transform: uppercase
+      text-align: right
+      margin-right: 2.48em
+    &-text
+      letter-spacing: 0.03em
+      line-height: 1.43
+      margin-left: 2.64em
+      max-width: 16em
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        left: -2.64em
+        top: 50%
+        transform: translateY(-50%)
+        background-color: $text
+        width: 1px
+        height: 80%
+    ol
+      list-style: none
+      counter-reset: myCounter
+      margin-top: 1.07em
+      margin-bottom: 0
+      padding-left: 0
+      li
+        display: flex
+        padding-left: 4.5em
+        position: relative
+        margin-bottom: 2.03em
+        &::before
+          position: absolute
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+          counter-increment: myCounter
+          content: '0' counter(myCounter)
+          font-family: oswald
+          font-size: 1.43em
+          font-weight: 700
+          color: $accent
+          opacity: 0.5
+        &:first-child::before
+          width: 1.55em
+          height: 1.1em
+          opacity: 1
+          content: ''
+          background-image: url(../img/arrow.png)
+          background-repeat: no-repeat
+          background-size: 100% 100%
+        
+.works
+  margin-top: 5.36em
+  &-list
+    display: flex
+    &-item
+      display: flex
+      flex-direction: column
+      img
+        max-width: 100%
+      
+.price
+  margin-top: 7.14em
+  &-content
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &-table
+    width: 51.3%
+    table
+      width: 100%
+      tbody
+        tr
+          height: 2.71em
+          td
+            letter-spacing: 0.03em
+            &:nth-child(1)
+              padding-right: 10px
+      thead
+        margin-bottom: 2em
+        tr
+          height: 3.21em
+        th
+          vertical-align: top
+          text-align: left
+          line-height: 1
+          font-weight: 700
+          letter-spacing: 0.03em
+          &:nth-child(1)
+            width: 34.9%
+          &:nth-child(2)
+            width: 28%
+          &:nth-child(3)
+            width: 22%
+  &-calc
+    margin-top: 0.29em
+    padding: 10px 10px 10px 0
+    width: 44.3%
+    box-shadow: inset -10px -10px 0 #a5a5a5, inset -10px 10px 0 #a5a5a5
+    &-wrap
+      padding: 44px 46px 30px 46px
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      position: relative
+      &::after
+        content: ''
+        background-image: url(../img/glasses.png)
+        position: absolute
+        bottom: 0
+        left: 22px
+        width: 18.43em
+        height: 14.21em
+        background-size: 100% 100%
+        background-repeat: no-repeat
+        transform: translateY(63.3%)
+      .submit
+        width: 100%
+        display: flex
+        justify-content: flex-end
+        padding-top: 1em
+        input
+          cursor: pointer
+          appearance: none
+          border: none
+          background-color: $accent
+          color: #fff
+          text-transform: uppercase
+          display: inline-flex
+          justify-content: center
+          align-items: center
+          height: 3.5em
+          width: 15em
+          font-size: 0.86em
+          font-weight: 600
+          letter-spacing: 0.16em
+          transition: 0.2s
+          &:hover
+            background-color: darken($accent, 5%)
+      span
+        width: 47%
+        margin-bottom: 1.3em
+        p
+          margin-top: 0
+          margin-bottom: 2em
+          letter-spacing: 0.03em
+        input
+          width: 100%
+          height: 2.86em
+          font-weight: 600
+          line-height: 2.86em
+          letter-spacing: 0.03em
+          border: none
+          box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.35) inset
+          padding: 0 1.43em
+        select
+          appearance: none
+          outline: none
+          width: 100%
+          font-weight: 600
+          letter-spacing: 0.03em
+          height: 2.86em
+          box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.35) inset
+          border: none
+          padding: 0 2.14em 0 1.43em
+          background: url(../img/select.png) right 1.43em center no-repeat
+          
+.contacts
+  margin-top: 9.81em
+  padding-bottom: 3.86em
+  overflow: hidden
+  &-form
+    width: 64.1%
+    margin-right: -3.14em
+    padding: 10px
+    box-shadow: inset 10px 10px 0 #a5a5a5, inset 10px -10px 0 #a5a5a5
+    &-wrap
+      padding: 3.16em 2.79em 2.2em 2.64em
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      position: relative
+      &::after
+        content: ''
+        background-image: url(../img/glasses.png)
+        position: absolute
+        bottom: 29px
+        left: 15px
+        width: 18.43em
+        height: 14.21em
+        background-size: 100% 100%
+        background-repeat: no-repeat
+        transform: translateY(63.3%)
+      .submit
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        input
+          appearance: none
+          cursor: pointer
+          border: none
+          background-color: $accent
+          color: #fff
+          font-size: 0.86em
+          font-weight: 600
+          text-transform: uppercase
+          width: 15em
+          height: 3.5em
+          letter-spacing: 0.1em
+          transition: 0.2s
+          &:hover
+            background-color: darken($accent, 5%)
+        p
+          margin-top: 0
+          margin-bottom: 0
+          margin-right: 13.5%
+          font-size: 0.86em
+          opacity: 0.3
+          max-width: 10.83em
+      span
+        p
+          margin-top: 0
+          margin-bottom: 2.14em
+          font-weight: 500
+          line-height: 1
+          letter-spacing: 0.03em
+        textarea
+          resize: none
+          padding: 0.43em 1.43em
+          width: 100%
+          height: 4.86em
+          font-family: $default-font
+          font-size: 1em
+          line-height: 1.71em
+          letter-spacing: 0.03em
+          border: none
+          box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.35) inset
+          &::placeholder
+            font-size: 1em
+            color: #484848
+        &:nth-child(4)
+          width: 100%
+          margin-bottom: 1.8em
+        &:nth-child(-n+3)
+          margin-bottom: 1.3em
+          width: 30.5%
+          input
+            letter-spacing: 0.03em
+            font-family: $default-font
+            font-size: 1em
+            padding: 0 1.43em
+            width: 100%
+            height: 2.86em
+            line-height: 2.86em
+            border: none
+            box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.35) inset
+            &::placeholder
+              font-size: 1em
+              color: #484848
+  &-content
+    padding: 0 3.14em
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &-map
+    width: 60%
+    height: 245px
+    #map
+      width: 100%
+      height: 100%
+  &-text
+    p
+      margin-top: -3px
+      margin-bottom: 0
+      line-height: 1.71
+      letter-spacing: 0.025em
+      max-width: 25em
+  &-block
+    margin-top: 1.77em
+    display: flex
+    align-items: flex-start
+    &-image
+      width: 46px
+    &-text
+      line-height: 1.29
+      text-decoration: none
+      color: $text
+      .descr
+        margin-top: 5px
+        letter-spacing: 0.03em
+      .title
+        text-decoration: none
+        color: $text
+        font-family: oswald
+        font-weight: 700
+        letter-spacing: 0.03em
+        line-height: 1
+        text-transform: uppercase
+        
+        
+.price-content
+  font-size: 14px
+  .container
+    padding-top: 46px
+    background-color: #fff
+  .section-header
+    margin-bottom: 4.57em
+  &-table
+    table
+      width: 100%
+      border-spacing: 0
+      thead
+        tr
+          height: 3.36em
+          th
+            text-align: left
+            font-weight: 700
+            vertical-align: top
+            line-height: 1
+            &:nth-child(1)
+              width: calc(100% - 26.57em)
+            &:nth-child(2)
+              width: 8.57em
+            &:nth-child(3)
+              width: 9em
+            &:nth-child(4)
+              width: 9em
+      tbody
+        tr
+          min-height: 2.93em
+          &:hover
+            td
+              background-color: rgba($accent, 0.21)
+              font-weight: 600
+              color: $accent
+      tr
+        td, th
+          letter-spacing: 0.03em
+          &:first-child
+            padding-left: 46px
+          &:last-child
+            padding-right: 46px
+          
+.reviews
+  &-sep
+    margin: 0 0.67em
+  &-info
+    margin-top: 0.63em
+    font-size: 0.86em
+    letter-spacing: -0.08em
+    color: #bdbdbd
+    text-align: center
+  &-author
+    margin-top: 0.63em
+    text-align: center
+    font-family: oswald
+    font-weight: 700
+  &-photo
+    width: 5.57em
+    height: 5.57em
+    background-color: #ccc
+    margin: -1.86em auto 0 auto
+    border-radius: 50%
+    border: 2px solid #fff
+    position: relative
+    z-index: 2
+  &-text
+    min-height: 150px
+    border-top: 1px solid #eee
+    padding: 2.29em 2.14em 2.79em 2.14em
+    background: linear-gradient(to bottom, #eee, rgba(0, 0, 0, 0)) top left/1px 100% no-repeat, linear-gradient(to bottom, #eee, rgba(0, 0, 0, 0)) top right/1px 100% no-repeat, #fff
+    position: relative
+    z-index: 2
+    &-wrap
+      position: relative
+      &::after
+        width: 109%
+        width: 27.14em
+        height: 7.5em
+        position: absolute
+        left: 50%
+        bottom: 0
+        transform: translateX(-50%) translateY(50%)
+        content: ''
+        background-image: url(../img/shadow.png)
+        background-size: 100% 100%
+        background-repeat: no-repeat
+    p
+      text-align: center
+      margin: 0
+      color: #7b7b7b
+      font-size: 0.86em
+      line-height: 1.67
+      letter-spacing: 0.023em
+  &-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    padding: 0.29em 2.5em 0 2.5em
+    &-item
+      margin: 0 11px 47px 11px
+      width: 350px
+
+.more-button
+  font-size: 12px
+  text-align: center
+  button
+    cursor: pointer
+    font-weight: 600
+    letter-spacing: 0.1em
+    color: #fff
+    text-transform: uppercase
+    border: none
+    background-color: $accent
+    width: 15em
+    height: 3.5em
+    transition: 0.2s
+    &:hover
+      background-color: darken($accent, 5%)
+    
+.company
+  & + .contacts
+    margin-top: 3.2em
+  &-list
+    margin-top: 3.95em
+    display: flex
+    flex-wrap: wrap
+    padding: 0 1.21em
+    &-item
+      flex: 1 0 25%
+      text-align: center
+      margin-bottom: 3.57em
+      p
+        margin-top: 1.75em
+        margin-bottom: 0
+        font-family: oswald
+        font-size: 0.97em
+        font-weight: 700
+        line-height: 1.43
+        letter-spacing: 0.037em
+        text-transform: uppercase
+  &-content
+    padding: 0 3.29em
+    font-family: $default-font
+    font-size: 1em
+    line-height: 1.43
+    letter-spacing: 0.025em
+    p
+      margin-top: 1.4em
+      margin-bottom: 1.4em
+      
+.work
+  & + .contacts
+    margin-top: 7.4em
+  &-list
+    padding: 3px 2.5em 0 2.5em
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    &-item
+      flex: 0 0 20%
+      padding: 0 0.79em
+      margin-bottom: 1.57em
+      display: flex
+      align-items: flex-start
+      img
+        width: 100%
+        height: auto
+        
+.bg-map
+  font-size: 14px
+  #map
+    background-image: url(../img/map-load.png)
+    background-size: cover
+    max-width: calc(1190px + ((100% - 1190px) / 2))
+    background-position: right
+    width: 100%
+    height: 510px
+    left: 0
+
+.contact-title
+  font-size: 14px
+  margin-top: -10.07em
+  position: relative
+  z-index: 1
+  .section-header
+    padding: 4.17em 4.13em 0 4.13em
+    margin-bottom: 0
+    max-width: 502px
+    background-color: #fff
+    
+.contact
+  font-size: 14px
+  position: relative
+  z-index: 1
+  .container
+    background-color: #fff
+    padding-top: 4.29em
+    padding-bottom: 4.29em
+  &-form
+    padding: 0 3.57em
+    &-wrap
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      .submit
+        width: 100%
+        text-align: center
+        input
+          font-family: $default-font
+          font-size: 0.86em
+          font-weight: 600
+          color: #fff
+          border: none
+          background-color: $accent
+          text-transform: uppercase
+          letter-spacing: 0.1em
+          height: 3.5em
+          width: 15em
+          cursor: pointer
+          transition: 0.2s
+          &:hover
+            background-color: darken($accent, 5%)
+      span
+        width: 32%
+        margin-bottom: 1.54em
+        &:nth-child(4)
+          width: 100%
+        p
+          margin-top: 0
+          margin-bottom: 2.04em
+          font-weight: 500
+          letter-spacing: 0.025em
+        textarea
+          appearance: none
+          font-family: $default-font
+          font-size: 1em
+          border: none
+          height: 10.36em
+          width: 100%
+          line-height: 1.71em
+          padding: 0.6em 1.43em
+          box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.35) inset
+          resize: none
+          &::placeholder
+            font-family: $default-font
+            font-size: 1em
+            color: #484848
+        input
+          appearance: none
+          font-family: $default-font
+          font-size: 1em
+          border: none
+          height: 2.86em
+          width: 100%
+          line-height: 2.86em
+          padding: 0 1.43em
+          box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.35) inset
+          &::placeholder
+            font-family: $default-font
+            font-size: 1em
+            color: #484848
+  &-list
+    padding: 0 3.57em
+    margin-bottom: 3.79em
+    display: flex
+    &-item
+      flex: 0 0 33.33333%
+      display: flex
+      align-items: flex-start
+    &-image
+      width: 46px
+    &-text
+      line-height: 1.29
+      text-decoration: none
+      color: $text
+      .descr
+        margin-top: 5px
+        letter-spacing: 0.03em
+      .title
+        text-decoration: none
+        color: $text
+        font-family: oswald
+        font-weight: 700
+        letter-spacing: 0.03em
+        line-height: 1
+        text-transform: uppercase
+        
+.menu-btn
+  position: fixed
+  top: 20px
+  right: 20px
+  z-index: 10
+  display: block
+  width: 40px
+  height: 40px
+  background-color: #fff
+  border-radius: 50%
+  display: none
+  align-items: center
+  justify-content: center
+  span
+    display: block
+    width: 20px
+    height: 2px
+    background-color: $accent
+    position: relative
+    &::after, &::before
+      content: ''
+      display: block
+      width: 20px
+      height: 2px
+      background-color: $accent
+      position: absolute
+      transition: 0.2s
+    &::after
+      transform: translateY(5px)
+    &::before
+      transform: translateY(-5px)
+  &.active
+    span
+      background-color: transparent
+      &::before
+        transform: rotate(-45deg)
+      &::after
+        transform: rotate(45deg)
+
+@import "media" // Always at the end

@@ -1,0 +1,401 @@
+@import "vars"
+
+@media screen and (max-width: 1199px)
+  .header
+    &-line
+      &-item
+        &.address
+          margin-left: 1em
+        &.mail, &.calc, &.call
+          margin-left: 1.5em
+  .capability
+    &-list
+      &-item
+        flex: 33.3333%
+  .how
+    &-content
+      align-items: center
+      flex-direction: column-reverse
+      > img
+        position: static
+  .contact
+    &-list
+      &-item
+        flex: 0 0 32%
+  .work
+    &-list
+      &-item
+        flex: 0 0 25%
+        
+@media screen and (max-width: 991px)
+  .header
+    background: #f7f7f7
+    &.none
+      background: #f7f7f7
+    .container
+      flex-wrap: wrap
+    &-menu
+      justify-content: center
+      ul
+        li
+          &:first-child
+            margin: 0
+    &-line
+      justify-content: space-around
+      &-item
+        &.address
+          margin-left: 0
+        &.mail, &.calc, &.call
+          margin-left: 0
+    &-right
+      width: 100%
+    &-left
+      justify-content: center
+      width: 100%
+  .front
+    font-size: 11px
+  .discont
+    font-size: 12px
+    transform: translateY(-47%)
+  .home-content
+    font-size: 12px
+  .how
+    &-content
+      padding: 0 15px
+      ol
+        font-size: 1.17em
+      > img
+        display: none
+  .works
+    &-list
+      flex-wrap: wrap
+      &-item
+        width: 50%
+        align-items: flex-start
+        img
+          width: 100%
+          min-height: 50%
+  .price
+    &-content
+      flex-wrap: wrap
+    &-calc
+      width: 100%
+      padding: 10px 0
+      box-shadow:  inset 0px -10px 0 #a5a5a5, inset 0px 10px 0 #a5a5a5
+      margin-bottom: 5.71em
+    &-table
+      width: 100%
+      padding: 0 15px
+  .contacts
+    &-content
+      flex-wrap: wrap
+      padding: 0
+    &-map
+      width: 100%
+    &-text
+      padding: 0 15px
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+      margin-bottom: 20px
+      p
+        margin-top: 0
+        max-width: none
+        width: 100%
+    &-form
+      width: 100%
+      box-shadow: inset 0 10px 0 #a5a5a5, inset 0 -10px 0 #a5a5a5;
+      padding: 10px 0
+  .capability
+    &-list
+      padding: 0 15px
+    &-preview
+      &-item
+        .content
+          padding-right: 15px
+  .reviews
+    &-list
+      padding: 0.29em 15px 0 15px
+      &-item
+        width: 340px
+  .work
+    &-list
+      &-item
+        flex: 0 0 33.333333%
+
+@media screen and (max-width: 767px)
+  .header
+    &-line
+      flex-wrap: wrap
+      &-item
+        margin-bottom: 5px
+        width: 50%
+        justify-content: center
+  .front
+    font-size: 12px
+    &-content
+      text-align: center
+      flex-direction: column-reverse
+    &-text
+      margin: 0
+      display: flex
+      flex-direction: column
+      align-items: center
+    &-image
+      margin-top: 20px
+  .discont
+    font-size: 11px
+    transform: translateY(-30%)
+  .home-content
+    .container
+      padding-top: 7.8em
+  .capability
+    &-list
+      &-item
+        flex: 50%
+    &-preview
+      &-item
+        flex-direction: column-reverse
+        .image
+          width: 100%
+          img
+            width: 100%
+        .content
+          width: 100%
+          padding: 0 15px
+  .how
+    &-content
+      ol
+        font-size: 1em
+  .price-content
+    font-size: 12px
+    &-table
+      table
+        thead
+          tr
+            th
+              &:nth-child(1)
+                padding-left: 15px
+                padding-right: 10px
+                width: 59%
+              &:nth-child(2)
+                width: 17%
+              &:nth-child(3)
+                width: 11%
+              &:nth-child(4)
+                width: 13%
+                padding-right: 15px
+        tbody
+          tr
+            td
+              padding-top: 5px
+              padding-bottom: 5px
+              &:nth-child(1)
+                padding-left: 15px
+                padding-right: 10px
+              &:nth-child(4)
+                padding-right: 15px
+  .contacts
+    margin-top: 5em
+  .company
+    &-content
+      padding: 0 15px
+  .contact
+    &-title
+      margin-top: -6em
+      .section-header
+        padding: 2em 4.13em 0 4.13em
+    &-form
+      padding: 0 15px
+    &-list
+      padding: 0 15px
+      &-item
+        &:nth-child(1)
+          flex: 0 0 35%
+        &:nth-child(2)
+          flex: 0 0 35%
+        &:nth-child(3)
+          flex: 0 0 30%
+  .reviews
+    &-text
+      &-wrap
+        &::after
+          width: 23.14em
+          height: 5.45em
+    &-list
+      &-item
+        width: 250px
+  .work
+    &-list
+      &-item
+        flex: 0 0 50%
+        
+@media screen and (max-width: 576px)
+  .header
+    &-left
+      padding-top: 10px
+      justify-content: flex-start
+      span
+        margin-left: 0.2em
+    &-menu
+      position: fixed
+      z-index: 9
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-color: rgba(#f7f7f7, 0.9)
+      max-height: 100vh
+      overflow: auto
+      font-size: 15px
+      transform: translateX(-100%)
+      transition: 0.4s
+      &.active
+        transform: translateX(0)
+      ul
+        width: 100%
+        flex-direction: column
+        align-items: flex-end
+        padding-right: 2em
+        margin-top: 5em
+        margin-bottom: 0
+    &-line
+      flex-direction: column
+      align-items: center
+      &-item
+        margin-bottom: 10px
+        width: 200px
+        justify-content: flex-start
+        &.calc
+          justify-content: center
+  .front
+    &-title
+      font-size: 9px
+    &-text
+      font-size: 8px
+      &-descr
+        font-size: 1.4em
+        padding: 0 15px
+        opacity: 1
+      &-btn
+        font-size: 11px
+  .home-content
+    .container
+      padding-top: 11.8em
+  .capability
+    &-list
+      &-item
+        flex: 0 0 100%
+        &::after
+          right: 0
+  .how
+    &-content
+      ol
+        font-size: 0.8em
+        li
+          padding-left: 3em
+          flex-wrap: wrap
+      &-title
+        margin-right: 1em
+        width: 100%
+        max-width: none
+        text-align: center
+      &-text
+        margin-left: 1em
+        width: 100%
+        max-width: none
+        text-align: center
+        &::before
+          display: none
+  .price
+    &-table
+      font-size: 10px
+      table
+        thead
+          th
+            &:nth-child(1)
+              width: 48%
+            &:nth-child(2)
+              width: 23%
+            &:nth-child(3)
+              width: 15%
+    &-calc
+      &-wrap
+        padding: 44px 15px 30px 15px
+        span
+          width: 100%
+  .contacts
+    &-text
+      flex-direction: column
+      align-items: center
+    &-block
+      width: 200px
+    &-form
+      &-wrap
+        span
+          flex: 0 0 100%
+  .menu-btn
+    display: flex
+  .price-content
+    font-size: 10px
+    &-table
+      table
+        tbody
+          tr
+            td
+              &:nth-child(1)
+                padding-left: 10px
+              &:nth-child(4)
+                padding-right: 10px
+        thead
+          tr
+            th
+              &:nth-child(1)
+                width: 50%
+                padding-left: 10px
+              &:nth-child(2)
+                width: 18%
+              &:nth-child(3)
+                width: 15%
+              &:nth-child(4)
+                width: 17%
+                padding-right: 10px
+  .company
+    &-list
+      &-item
+        flex: 1 0 33.333%
+  .contact
+    &-form
+      &-wrap
+        span
+          width: 100%
+    &-list
+      padding: 0 15px
+      flex-direction: column
+      align-items: center
+      &-item
+        &:nth-child(n)
+          width: 200px
+          margin-top: 10px
+  .reviews
+    &-text
+      &-wrap
+        &::after
+          width: 30.14em
+          height: 5.93em
+    &-list
+      &-item
+        margin-left: 0
+        margin-right: 0
+        width: 290px
+  
+  .work
+    &-list
+      padding: 3px 15px 0 15px
+      &-item
+        flex: 0 0 90%
+
+@media screen and (max-width: 480px)
+  .contacts-form-wrap::after
+    display: none
