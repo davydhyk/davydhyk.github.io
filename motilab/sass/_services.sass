@@ -1,0 +1,83 @@
+.services
+  font-size: 16px
+  padding: 6.45em 0 5.45em
+  @media screen and (max-width: 1023px)
+    font-size: 13px
+  @media screen and (max-width: 550px)
+    padding: 5.05em 0
+  .section-title
+    margin-left: -5px
+    @media screen and (max-width: 550px)
+      margin-left: 0
+      font-size: 3.07em
+  .container-sm
+    position: relative
+    &::after
+      content: ''
+      background-image: url(../img/services-img.png)
+      background-size: 100% 100%
+      width: 10.625em
+      height: 10.625em
+      position: absolute
+      top: 18px
+      right: 15px
+      @media screen and (max-width: 550px)
+        width: 5.384em
+        height: 5.384em
+        top: 5px
+        right: 20px
+  &-list
+    margin-top: 4.75em
+    display: flex
+    flex-wrap: wrap
+    @media screen and (max-width: 550px)
+      margin-top: 3.55em
+    &-item
+      width: 50%
+      display: flex
+      margin-bottom: 7.16%
+      @media screen and (max-width: 640px)
+        width: 100%
+      @media screen and (max-width: 550px)
+        margin-bottom: 10%
+      .image
+        width: 3.125em
+        margin-right: 2.375em
+        @media screen and (max-width: 1023px)
+          margin-right: 1.5em
+        @media screen and (max-width: 550px)
+          width: 3.525em
+          margin-right: 9.2%
+        img
+          width: 100%
+      &:nth-child(5), &:nth-child(6)
+        margin-bottom: 0
+        .descr
+          padding-top: 0.1em
+      @media screen and (max-width: 640px)
+        &:nth-child(5)
+          margin-bottom: 7.16%  
+      .descr
+        padding-top: 0.7em
+        @media screen and (max-width: 550px)
+          padding-top: 0.2em
+        &-title
+          color: #262741
+          font-size: 1.5em
+          font-weight: 700
+          line-height: 1
+          letter-spacing: 0.025em
+          @media screen and (max-width: 550px)
+            letter-spacing: -0.025641em
+        &-text
+          margin-top: 1.95em
+          color: #585964
+          font-size: 1.125em
+          line-height: 1.89
+          letter-spacing: -0.029em
+          @media screen and (max-width: 550px)
+            margin-top: 1.35em
+            letter-spacing: -0.01367521em
+            line-height: 1.93
+            br
+              display: none
