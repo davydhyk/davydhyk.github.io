@@ -1,0 +1,45 @@
+.project
+  padding-top: 151px
+  padding-bottom: 75px
+  &-arrow
+    position: absolute
+    z-index: 1
+    top: 42.1%
+    cursor: pointer
+    &.prev
+      left: 0
+    &.next
+      right: 0
+  &-list
+    padding: 79px 56px 0
+    position: relative
+    &-item
+      margin: 0 12.5px
+      outline: none
+      padding-bottom: 10px
+      .image img
+        max-width: 100%
+        margin: 0 auto
+      .title
+        margin-top: 31px
+        font-size: 18px
+        height: 2.333em
+        line-height: 1.222
+        text-align: center
+      a
+        position: relative
+        display: flex
+        max-width: 6.071em
+        justify-content: center
+        align-items: center
+        margin: 18px auto 0
+        color: #9D1B26
+        font-size: 14px
+        line-height: 1.214
+        &:after
+          content: ''
+          position: absolute
+          top: 130%
+          height: 1px
+          width: 100%
+          background-color: #9D1B26

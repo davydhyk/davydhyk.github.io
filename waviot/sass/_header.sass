@@ -1,0 +1,155 @@
+.header
+  background-image: url(../img/header-bg.svg)
+  background-size: cover
+  background-position: center
+  overflow: hidden
+  &-top
+    padding: 17px 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    nav 
+      ul
+        display: flex
+        margin: -10px 0 0 0
+        padding: 0 19px 0 0
+        list-style: none
+        li
+          padding-left: 4em
+          a
+            letter-spacing: -0.6px
+            font-weight: 500
+            position: relative
+            &::after
+              position: absolute
+              top: 110%
+              left: 0
+              right: 0
+              height: 1px
+              background-color: #9D1B26
+              content: ''
+              transition: 0.2s
+              transform: scaleX(0)
+            &:hover::after
+              transform: scaleX(1)
+  &-body
+    padding-top: 146px
+    height: 690px
+    display: flex
+    position: relative
+    &-bg
+      position: absolute
+      top: 13%
+      right: -2.4%
+    &-title
+      font-size: 28px
+      font-weight: 500
+      line-height: 1
+      letter-spacing: 0.6px
+      max-width: 20em
+      b
+        display: block
+        margin-bottom: 29px
+        font-size: 1.25em
+        line-height: 1.457
+        font-weight: 700
+        letter-spacing: normal
+        text-transform: uppercase
+    &-main
+      a
+        margin-top: 77px
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 15em
+        height: 3.75em
+        color: #fff
+        font-weight: 400
+        background: #AE2220
+        box-shadow: 0px 10px 20px rgba(157, 27, 38, 0.3)
+        border-radius: 1.875em
+        transition: 0.2s
+        &:hover
+          background: darken(#AE2220, 5%)
+    &-products
+      width: 243px
+      margin-left: 6.4%
+      padding-top: 5px
+      .wrap
+        padding-top: 2px
+        position: relative
+        &::after
+          content: ''
+          position: absolute
+          right: 0
+          top: 0
+          bottom: 0
+          width: 2px
+          background-color: #9D1B26
+          opacity: 0.3
+        .control
+          position: absolute
+          right: 0
+          top: 0
+          height: 50%
+          width: 2px
+          background-color: #9D1B26
+          transition: 0.2s
+      .product
+        transition: 0.2s
+        &:first-child
+          margin-bottom: 49px
+        &:nth-child(2)
+          opacity: 0.3
+        &-title
+          font-size: 14px
+          line-height: 1.214
+          margin-bottom: 9px
+        a
+          color: #9D1B26
+          font-size: 12px
+          position: relative
+          &::after
+            content: ''
+            position: absolute
+            top: 110%
+            left: 0
+            height: 1px
+            width: 100%
+            background-color: #9D1B26
+            opacity: 0.3
+      .arrows
+        margin-top: 46px
+        display: flex
+        justify-content: center
+        padding-right: 33px
+        svg
+          cursor: pointer
+          margin: 0 7.5px
+          fill: #9D1B26
+          transition: 0.2s
+          &:first-child
+            opacity: 0.3
+            transform: rotate(180deg)
+            cursor: default
+      &.active
+        .wrap
+          .product
+            &:first-child
+              opacity: 0.3
+            &:nth-child(2)
+              opacity: 1
+          .control
+            top: 50%
+        .arrows
+          svg
+            &:first-child
+              opacity: 1
+              cursor: pointer
+            &:last-child
+              opacity: 0.3
+              cursor: default
+    &-next
+      position: absolute
+      left: -0.1%
+      bottom: 14.5%
