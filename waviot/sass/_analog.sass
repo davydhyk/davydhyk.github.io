@@ -1,0 +1,56 @@
+.analog
+  padding-top: 153px
+  padding-bottom: 150px
+  background-image: url(../img/analog-bg.svg)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  ul
+    margin: 71px 0 0 0
+    padding-left: 0
+    list-style: none
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    li
+      padding-left: 16px
+      position: relative
+      &:nth-child(1)
+        width: 54%
+      &:nth-child(2)
+        width: 40.2%
+      &:nth-child(3)
+        margin-top: 41px
+      &::before
+        position: absolute
+        left: -2px
+        top: 5px
+        content: ''
+        width: 8px
+        height: 8px
+        background-color: #9D1B26
+        border-radius: 50%
+  &-table
+    overflow: auto
+    padding-top: 48px
+    table
+      min-width: 100%
+      border-collapse: collapse
+      th
+        font-weight: 800
+        line-height: 1
+        padding: 0 0 30px 0 
+        &:first-child
+          text-align: left
+      tbody tr:first-child
+        border-top: 1px solid rgba(#071D53, 0.2)
+      td
+        border-bottom: 1px solid rgba(#071D53, 0.2)
+        text-align: center
+        height: 2.5em
+        padding: 0
+        &:first-child
+          text-align: left
+      th, td
+        &:first-child
+          width: 47.1%
