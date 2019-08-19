@@ -12,6 +12,9 @@ body
   max-width: 2333px
   width: 100%
   margin: 0 auto
+  @media screen and (min-width: 1200px)
+    padding: 0 40px
+    max-width: 2383px
 
 a
   text-decoration: none
@@ -31,6 +34,10 @@ a
   letter-spacing: 0.1em
   line-height: 1
   transform: rotate(-90deg)
+  transition: 0.2s
+  &:hover
+    &::after
+      animation: bounce-left 1s infinite
   &-wrap
     position: absolute
     top: 0
@@ -58,6 +65,22 @@ a
     color: #001cc5
     &::before
       background-color: #001cc5
+
+@keyframes bounce-left
+  0%
+    left: 0
+  50%
+    left: 10px
+  100%
+    left: 0
+
+@keyframes bounce-top
+  0%
+    top: 0
+  50%
+    top: 7px
+  100%
+    top: 0
 
 .menu-opener
   width: 30px

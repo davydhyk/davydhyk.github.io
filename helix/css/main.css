@@ -18,6 +18,13 @@ body {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 0 40px;
+    max-width: 2383px;
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -46,6 +53,13 @@ a {
   line-height: 1;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.scroll-link:hover::after {
+  -webkit-animation: bounce-left 1s infinite;
+          animation: bounce-left 1s infinite;
 }
 
 .scroll-link-wrap {
@@ -87,6 +101,54 @@ a {
 
 .scroll-link.blue::before {
   background-color: #001cc5;
+}
+
+@-webkit-keyframes bounce-left {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 10px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes bounce-left {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 10px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes bounce-top {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 7px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes bounce-top {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 7px;
+  }
+  100% {
+    top: 0;
+  }
 }
 
 .menu-opener {
@@ -167,6 +229,15 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.header-top .logo {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.header-top .logo:hover {
+  opacity: 0.8;
 }
 
 .header-top nav ul {
@@ -272,9 +343,19 @@ a {
   margin-right: 1em;
 }
 
+.header-body-text .btns a:nth-child(1):hover {
+  background-color: #fff;
+  color: #141941;
+}
+
 .header-body-text .btns a:nth-child(2) {
   color: #c8ff3b;
   border: 2px solid #c8ff3b;
+}
+
+.header-body-text .btns a:nth-child(2):hover {
+  background-color: #c8ff3b;
+  color: #141941;
 }
 
 .header-body-text .soc {
@@ -294,6 +375,12 @@ a {
   letter-spacing: 0.1em;
   position: relative;
   padding-right: 3em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.header-body-text .soc a:hover {
+  opacity: 0.8;
 }
 
 .header-body-text .soc a:nth-child(1) {
@@ -659,6 +746,12 @@ a {
   font-size: 0.8865em;
   letter-spacing: 0.1em;
   position: relative;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.what-text a:hover {
+  opacity: 0.8;
 }
 
 .what-text a::before {
@@ -811,6 +904,13 @@ a {
   border: 1px solid #3b44fa;
   background-color: inherit;
   cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.contact-submit input:hover {
+  background-color: #3b44fa;
+  color: #f6f6f6;
 }
 
 .footer {
@@ -824,6 +924,15 @@ a {
   position: relative;
 }
 
+.footer-logo a {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.footer-logo a:hover {
+  opacity: 0.8;
+}
+
 .footer-anchor {
   position: absolute;
   top: 0;
@@ -835,10 +944,22 @@ a {
   line-height: 1;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-anchor {
+    right: 40px;
+  }
+}
+
 .footer-anchor b {
   font-size: 2.571em;
   font-weight: 400;
   line-height: 1;
+}
+
+.footer-anchor:hover b {
+  position: relative;
+  -webkit-animation: bounce-top 1s infinite;
+          animation: bounce-top 1s infinite;
 }
 
 .footer-menu {
@@ -860,6 +981,12 @@ a {
   font-size: 1.1em;
   line-height: 1;
   letter-spacing: 0.1em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.footer-menu ul li a:hover {
+  opacity: 0.8;
 }
 
 .footer-copy {

@@ -13,6 +13,10 @@
     display: flex
     align-items: center
     justify-content: space-between
+    .logo
+      transition: 0.2s
+      &:hover
+        opacity: 0.8
     nav
       ul
         display: flex
@@ -82,9 +86,15 @@
             color: #fff
             border: 1px solid #fff
             margin-right: 1em
+            &:hover
+              background-color: #fff
+              color: #141941
           &:nth-child(2)
             color: #c8ff3b
             border: 2px solid #c8ff3b
+            &:hover
+              background-color: #c8ff3b
+              color: #141941
       .soc
         margin-top: 5.9636650vw
         padding-left: 6px
@@ -96,6 +106,9 @@
           letter-spacing: 0.1em
           position: relative
           padding-right: 3em
+          transition: 0.2s
+          &:hover
+            opacity: 0.8
           &:nth-child(1)
             margin-right: 5em
           &::before
@@ -355,6 +368,9 @@
       font-size: 0.8865em
       letter-spacing: 0.1em
       position: relative
+      transition: 0.2s
+      &:hover
+        opacity: 0.8
       &::before
         content: ''
         position: absolute
@@ -449,6 +465,10 @@
       border: 1px solid #3b44fa
       background-color: inherit
       cursor: pointer
+      transition: 0.2s
+      &:hover
+        background-color: #3b44fa
+        color: #f6f6f6
 
 .footer
   margin-top: 3.159557vw
@@ -457,6 +477,11 @@
   font-size: 20px
   .container
     position: relative
+  &-logo
+    a
+      transition: 0.2s
+      &:hover
+        opacity: 0.8
   &-anchor
     position: absolute
     top: 0
@@ -466,10 +491,15 @@
     letter-spacing: 0.1em
     text-align: center
     line-height: 1
+    @media screen and (min-width: 1200px)
+      right: 40px
     b
       font-size: 2.571em
       font-weight: 400
       line-height: 1
+    &:hover b
+      position: relative
+      animation: bounce-top 1s infinite
   &-menu
     margin-top: 2.843601vw
     ul
@@ -483,6 +513,9 @@
           font-size: 1.1em
           line-height: 1
           letter-spacing: 0.1em
+          transition: 0.2s
+          &:hover
+            opacity: 0.8
   &-copy
     margin-top: 2.843601vw
     color: #fff
