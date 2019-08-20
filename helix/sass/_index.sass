@@ -554,37 +554,7 @@
       background-position: left 0 bottom 50%
       background-size: 40% auto
   .why
-    padding: 4.7vw 0
-    background-color: #f3f3f3
-    .container
-      display: block
-    &-title
-      width: auto
-      display: inline-block
-      margin-left: 10%
-      margin-bottom: 30px
-    &-list
-      background-color: transparent
-      width: auto
-      margin-left: -15px
-      margin-right: -15px
-      padding-left: 15px
-      padding-right: 15px
-      &-item
-        &:nth-child(1)
-          &::before
-            position: absolute
-            top: -11px
-            left: 0
-            transform: translateX(-50%)
-            content: ''
-            width: 109px
-            height: 5px
-            background-color: #3b43fc
-            background-image: none
-          &::after
-            top: -20px
-            left: 70px
+    font-size: 15px
   .our
     font-size: 17px
     &-title
@@ -616,7 +586,7 @@
         .title
           margin-left: -3.166em
   .why
-    font-size: 15px
+    font-size: 14px
     &-list
       &-item
         &:nth-child(1), &:nth-child(3)
@@ -657,6 +627,40 @@
         height: auto
         max-width: 100%
         margin: 20px auto 0
+
+@media screen and (max-width: 1250px)
+  .why
+    padding: 4.7vw 0
+    background-color: #f3f3f3
+    .container
+      display: block
+    &-title
+      width: auto
+      display: inline-block
+      margin-left: 10%
+      margin-bottom: 30px
+    &-list
+      background-color: transparent
+      width: auto
+      margin-left: -15px
+      margin-right: -15px
+      padding-left: 15px
+      padding-right: 15px
+      &-item
+        &:nth-child(1)
+          &::before
+            position: absolute
+            top: -11px
+            left: 0
+            transform: translateX(-50%)
+            content: ''
+            width: 109px
+            height: 5px
+            background-color: #3b43fc
+            background-image: none
+          &::after
+            top: -20px
+            left: 70px
 
 @media screen and (max-width: 1150px)
   .footer-copy
