@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#0f1110">
+  <title>Sosedi</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo"><a href="#">соседи</a></div>
+      <div class="icons">
+        <div class="search">
+          <img src="img/icons/search.svg" alt="">
+        </div>
+        <div class="menu">
+          <img src="img/icons/menu.svg" alt="">
+          <img src="img/icons/close.svg" alt="" class="close">
+          <div class="menu-wrap">
+            <div class="container">
+              <div class="wrap">
+                <ul>
+                  <li class="active"><a href="#">Проекты</a></li>
+                  <li><a href="#">О компании</a></li>
+                  <li><a href="#">Новости</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="menu-line">
+                  <div class="loc"><a href="#"><img src="img/icons/loc.svg" alt="">Москва</a></div>
+                  <div class="soc">
+                    <a href="#"><img src="img/icons/vk.svg" alt=""></a>
+                    <a href="#"><img src="img/icons/fb.svg" alt=""></a>
+                    <a href="#"><img src="img/icons/inst.svg" alt=""></a>
+                  </div>
+                  <div class="phone"><a href="#"><img src="img/icons/phone.svg" alt="">+7 123 456-7890</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <section class="contact">
+    <div class="container">
+      <div class="wrap">
+        <div class="contact-title">Контакты</div>
+        <div class="contact-map" id="map"></div>
+        <div class="contact-marker" id="map-marker"><img src="img/icons/loc.svg" alt="">Сытинский переулок, 5</div>
+        <script src="js/map.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG2I3uy1WnkiNMJMwkqbyrQ0aFYWd5jzs&callback=initMap"></script>
+      </div>
+    </div>
+  </section>
+
+  <section class="info">
+    <div class="container">
+      <div class="wrap">
+        <div class="loc">
+          <div class="image"><img src="img/icons/loc.svg" alt=""></div>
+          <div class="text">
+            <a href="#">Москва, Сытинский переулок, 5/10 стр.3</a>
+            <hr>
+            <span>Главный офис: 4315</span>
+          </div>
+        </div>
+        <div class="phone">
+          <div class="image"><img src="img/icons/phone.svg" alt=""></div>
+          <div class="text">
+            <a href="tel:+7 123 456-7890">+7 123 456-7890</a>
+            <hr>
+            <a href="tel:+7 123 456-7890">+7 123 456-7890</a>
+          </div>
+        </div>
+        <div class="mail">
+          <div class="image"><img src="img/icons/at.svg" alt=""></div>
+          <div class="text">
+            <a href="mailto:testemail.gmail.com">testemail.gmail.com</a>
+            <div class="title">Мы в соц.сетях:</div>
+            <div class="soc">
+              <a href="#"><img src="img/icons/vk.svg" alt=""></a>
+              <a href="#"><img src="img/icons/fb.svg" alt=""></a>
+              <a href="#"><img src="img/icons/inst.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="form">
+    <div class="container">
+      <div class="wrap">
+        <div class="form-title">Напишите нам</div>
+        <form action="">
+          <div class="form-wrap">
+            <div class="left">
+              <div class="input">
+                <div>Ваше Имя*</div>
+                <span><input type="text" value="Александр Фомин"></span>
+              </div>
+              <div class="input">
+                <div>Ваш телефон</div>
+                <span><input type="text" placeholder="+ 7"></span>
+              </div>
+              <div class="input">
+                <div>Ваш E-mail*</div>
+                <span><input type="text" placeholder="example@example.com"></span>
+              </div>
+            </div>
+            <div class="right">
+              <div class="text">
+                <div>Ваше сообщение</div>
+                <span><textarea>Здравствуйте!
+
+Меня интересуют пентхаусы в комплексе «Москов Сити».
+Имеются ли у Вас реализованные проекты в 
+интересующей меня области? 
+Если да, ожидаю их примеры на мою почту.
+
+Спасибо за внимание, буду ждать вашего ответа.
+Александр       </textarea></span>
+              </div>
+              <div class="send"><button type="submit"><img src="img/icons/send.svg" alt="">Отправить</button></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

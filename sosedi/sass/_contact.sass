@@ -1,0 +1,256 @@
+.contact
+  font-size: 1.041667vw
+  background-color: #0f1110
+  background-image: url(../img/contact-bg.png)
+  background-size: cover
+  background-position: center
+  border-bottom: 1px solid rgba(#fff, 0.1)
+  .wrap
+    padding-top: 8em
+    position: relative
+    &::before, &::after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      width: 1px
+      background-color: rgba(#fff, 0.1)
+    &::before
+      left: 0
+    &::after
+      right: -1px
+  &-title
+    font-size: 3.5em
+    font-weight: 700
+    text-align: center
+  &-map
+    z-index: 1
+    margin-top: 3.65em
+    height: 31.6em
+    min-height: 400px
+    box-shadow: 0 1em 1.5em rgba(#000, 0.8)
+    .gmnoprint, .gm-style-cc
+      display: none
+    iframe + div
+      display: none
+  &-marker
+    position: absolute
+    top: 0
+    left: 0
+    transform: translate(-50%, -100%)
+    width: 280px
+    height: 50px
+    border-radius: 25px
+    background-color: #fff
+    box-shadow: 0 15px 25px rgba(#000, 0.7)
+    display: flex
+    align-items: center
+    justify-content: center
+    font-family: Gilroy
+    color: #0f1110
+    font-size: 18px
+    font-weight: 500
+    img
+      filter: invert(1)
+      margin-right: 20px
+  .popup-bubble-anchor
+    position: absolute
+    width: 100%
+    bottom: 10px
+    left: 0
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      transform: translate(-50%, 0)
+      width: 0
+      height: 0
+      border-left: 6px solid transparent
+      border-right: 6px solid transparent
+      border-top: 10px solid #fff
+  .popup-container
+    cursor: auto
+    height: 0
+    position: absolute
+    width: 280px
+
+.info
+  font-size: 1.041667vw
+  background-color: #0f1110
+  .wrap
+    padding-top: 4.35em
+    padding-bottom: 5.2em
+    position: relative
+    display: flex
+    justify-content: space-between
+    &::before, &::after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      width: 1px
+      background-color: rgba(#fff, 0.1)
+    &::before
+      left: 0
+    &::after
+      right: -1px
+    > div
+      font-size: 18px
+      display: flex
+      align-items: flex-start
+      @media screen and (min-width: 1921px)
+        font-size: 0.9375vw
+      &.loc
+        a
+          display: block
+          max-width: 14.444em
+        span
+          font-size: 1em
+          font-weight: 500
+          opacity: 0.7
+        hr
+          height: 1px
+          width: 100%
+          border: none
+          margin: 10px 0
+          opacity: 0.1
+          background-color: #fff
+      &.phone
+        hr
+          height: 1px
+          width: 100%
+          border: none
+          margin: 1.5em 0
+          opacity: 0.1
+          background-color: #fff
+      .image
+        margin-top: 3px
+        margin-right: 1.1112em
+        img
+          height: 1.3888em
+      .text
+        > a
+          font-size: 1em
+          font-weight: 500
+          line-height: 1.1667
+          opacity: 0.7
+          transition: 0.2s
+          b
+            font-weight: 500
+          &:hover
+            opacity: 1
+      .title
+        margin-top: 2.5em
+        font-size: 0.6666em
+        opacity: 0.7
+      .soc
+        display: flex
+        margin-top: 0.7778em
+        img
+          height: 1.1111em
+          transition: 0.2s
+        a
+          height: 1.1111em
+          display: inline-flex
+          align-items: center
+          &:nth-child(1) img
+            width: 1.1111em
+            height: auto
+          &:nth-child(2)
+            margin: 0 1.6667em
+          &:hover img
+            transform: scale(1.2)
+
+@media screen and (max-width: 1440px)
+  .contact, .info
+    font-size: 1.25vw
+
+@media screen and (max-width: 1024px)
+  .contact
+    font-size: 1.7vw
+    .wrap
+      padding-top: 6em
+  .info
+    font-size: 1.7vw
+
+@media screen and (max-width: 768px)
+  .contact
+    font-size: 2.5vw
+    .wrap
+      padding-top: 4em
+    &-title
+      font-size: 40px
+    &-map
+      margin-top: 2em
+  .info
+    font-size: 2.5vw
+    .wrap
+      padding-top: 4em
+      padding-bottom: 4.5em
+      > div
+        font-size: 2.34375vw
+
+@media screen and (max-width: 567px)
+  .contact
+    font-size: 3.6vw
+    border-bottom: none
+    .container
+      position: relative
+      &::before, &::after
+        content: ''
+        position: absolute
+        top: 0
+        width: 1px
+        height: 100%
+        background-color: rgba(#fff, 0.1)
+      &::before
+        left: 58.6%
+      &::after
+        right: 58.6%
+    .wrap
+      padding-top: 5em
+  .info
+    font-size: 3.6vw
+    .wrap
+      flex-wrap: wrap
+      > div
+        font-size: 4.266667vw
+        width: 100%
+        margin-bottom: 3.125em
+        &:last-child
+          margin-bottom: 0
+        .image
+          position: relative
+          margin: 0
+          width: 1.46875em
+          img
+            position: absolute
+            top: 3px
+            left: 0
+            height: 1em
+            width: auto
+        &.phone
+          hr
+            margin: 0 1em
+            width: 1px
+            height: 0.8em
+            display: inline-block
+            opacity: 0.7
+        .title
+          font-size: 0.75em
+          padding-top: 1em
+          margin-top: 1.5em
+          border-top: 1px solid rgba(#fff, 0.1)
+        &.mail
+          .text
+            min-width: 14.444em
+        .soc a
+          height: 1.25em
+          img
+            height: 1.25em
+          &:nth-child(1) img
+            width: 1.25em
+    + .form
+      &::before, &::after
+        top: 0

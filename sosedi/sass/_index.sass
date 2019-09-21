@@ -1,0 +1,527 @@
+.header
+  font-size: 1.04166vw
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 10
+  @media screen and (max-width: 1440px)
+    font-size: 1.25vw
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    height: 1px
+    background-color: rgba(#fff, 0.1)
+    z-index: 1
+  .container
+    height: 6em
+    padding-top: 3em
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  .logo
+    margin-top: -0.35em
+    a
+      font-size: 0.9em
+      font-weight: 900
+      letter-spacing: 0.1944em
+      text-transform: uppercase
+  .menu
+    &.active .menu-wrap
+      transform: none
+    &-wrap
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      background: #0f1110 url(../img/menu-bg.png)
+      z-index: -1
+      transform: translateY(-100%)
+      transition: 0.4s
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 6em
+        height: 1px
+        background-color: rgba(#fff, 0.1)
+        z-index: 1
+      .container
+        height: 100vh
+        min-height: 46.875vw
+        padding-top: 6em
+        padding-bottom: 6em
+        overflow: hidden
+        &::before
+          content: ''
+          position: absolute
+          top: 0
+          bottom: 0
+          right: 57.2%
+          width: 1px
+          background-color: rgba(#fff, 0.1)
+          z-index: 11
+        &::after
+          content: ''
+          position: absolute
+          top: 0
+          bottom: 0
+          left: 57.2%
+          width: 1px
+          background-color: rgba(#fff, 0.1)
+          z-index: 11
+        .wrap
+          width: 100%
+          height: 100%
+          position: relative
+          &::before, &::after
+            content: ''
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            height: 150vh
+            width: 1px
+            background-color: rgba(#fff, 0.1)
+            z-index: 1
+          &::before
+            left: 0
+          &::after
+            right: -1px
+      ul
+        position: absolute
+        top: 18.4%
+        left: 0
+        width: 100%
+        height: 61.55%
+        min-height: 16em
+        list-style: none
+        margin: 0
+        padding: 0
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        li
+          font-size: 4em
+          font-weight: 700
+          line-height: 1
+          a
+            -webkit-text-fill-color: transparent
+            -webkit-text-stroke: 2px #fff
+            transition: 0.2s
+            opacity: 0.7
+            &:hover
+              opacity: 1
+          &.active a
+            opacity: 1
+            -webkit-text-fill-color: #fff
+            -webkit-text-stroke: 0px
+    &-line
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      display: flex
+      justify-content: space-between
+      .loc
+        line-height: 1
+        a
+          display: inline-flex
+          align-items: center
+          font-size: 0.9em
+          font-weight: 500
+          line-height: 0
+          img
+            height: 1.389em
+            margin-right: 1.0556em
+      .soc
+        position: absolute
+        left: 50%
+        bottom: 0
+        transform: translateX(-50%)
+        line-height: 1em
+        display: flex
+        align-items: center
+        a
+          margin: 0 0.75em
+          display: inline-flex
+          line-height: 1
+          img
+            height: 1em
+          &:first-child img
+            height: auto
+            width: 1em
+      .phone
+        line-height: 1
+        a
+          display: inline-flex
+          align-items: center
+          font-size: 0.9em
+          font-weight: 500
+          line-height: 0
+          img
+            height: 1.389em
+            margin-right: 1.0556em
+  .icons
+    display: flex
+    .menu
+      margin-left: 4em
+      > img
+        cursor: pointer
+        width: 1.1em
+      .close
+        display: none
+      &.active
+        > img:first-child
+          display: none
+        .close
+          display: inline
+    .search
+      cursor: pointer
+      img
+        width: 1.2em
+
+.home
+  font-size: 1.04166vw
+  position: relative
+  overflow: hidden
+  @media screen and (max-width: 1440px)
+    font-size: 1.25vw
+  .container
+    height: 100vh
+    min-height: 46.875vw
+    padding-top: 6em
+    padding-bottom: 6em
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 57.2%
+      width: 1px
+      background-color: rgba(#fff, 0.1)
+      z-index: 1
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 6em
+      height: 1px
+      background-color: rgba(#fff, 0.1)
+      z-index: 1
+  &-bgs
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(0, 0, 0, 0.6)
+    &.trs > *
+      transition: 0.4s
+    > *
+      position: absolute
+      width: 100%
+      height: 100%
+      z-index: -3
+      transform: scale(0.5) translateX(-129.2%)
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+      &.active
+        transform: scale(1) translateX(0)
+        z-index: -1
+        display: block
+        & ~ :not(.active):nth-child(n)
+          transform: scale(0.5) translateX(129.2%)
+      &.change
+        transform: scale(0.5)
+  &-left, &-leftbg
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    width: 41.1459%
+  &-left
+    background: #0f1110
+  &-leftbg
+    background-image: url(../img/lines.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+  &-wrap
+    width: 100%
+    height: 100%
+    position: relative
+    &::before, &::after
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      height: 150vh
+      width: 1px
+      background-color: rgba(#fff, 0.1)
+      z-index: 1
+    &::before
+      left: 0
+    &::after
+      right: -1px
+  &-names
+    position: absolute
+    left: 0
+    top: 43.0952%
+    width: 100%
+    display: flex
+    padding-left: 7.4em
+    &-item
+      padding-left: 0.362em
+      margin-right: 1.875em
+      font-size: 4em
+      font-weight: 700
+      letter-spacing: -0.00125em
+      -webkit-text-fill-color: transparent
+      -webkit-text-stroke: 2px #fff
+      position: relative
+      cursor: pointer
+      i
+        position: absolute
+        top: 1em
+        left: 0em
+        font-style: normal
+        font-size: 0.2em
+        -webkit-text-stroke: 0px
+        -webkit-text-fill-color: #fff
+      &.slick-current
+        -webkit-text-fill-color: #fff
+        -webkit-text-stroke: 0px #fff
+    .slick-list
+      max-width: 100%
+    .slick-track
+      display: flex
+      > *
+        outline: none
+  &-text
+    position: absolute
+    top: 70.7142%
+    left: 0
+    padding-left: 9.9444em
+    font-size: 0.9em
+    font-weight: 500
+    > div
+      width: 20.5em
+      position: absolute
+      top: 2.777em
+      z-index: -1
+      opacity: 0
+      transition: 0.5s
+      &.active
+        top: 0
+        opacity: 1
+        z-index: 0
+  &-counter
+    position: absolute
+    left: 0
+    bottom: -1px
+    width: 8.25em
+    line-height: 1
+    display: flex
+    justify-content: space-between
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      height: 3px
+      width: 42.42%
+      background-color: #fff
+      transform: translate(-50%, -50%)
+    span
+      font-size: 0.8em
+      font-weight: 700
+  &-share
+    position: absolute
+    bottom: 0
+    right: 0
+    line-height: 0
+    img
+      width: 1em
+  &-ctrl
+    position: absolute
+    top: 26.1904%
+    right: 0
+    width: 6.25em
+    display: flex
+    justify-content: space-between
+    >:nth-child(1)
+      transform-origin: left
+    >:nth-child(2)
+      transform-origin: right
+    > .slick-disabled
+      cursor: default
+      opacity: 0.7
+      &:hover
+        transform: none
+    > *
+      cursor: pointer
+      transition: 0.2s
+      width: 1em
+      &:hover
+        transform: scale(1.2)
+  &-link
+    position: absolute
+    bottom: 0
+    left: 50.6%
+    font-size: 0.8em
+    font-weight: 700
+    transform-origin: left bottom
+    transform: rotate(-90deg)
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 50%
+      height: 0.18em
+      width: 1.25em
+      background-color: #fff
+    a
+      padding-left: 3em
+
+@media screen and (max-width: 1024px)
+  .header
+    font-size: 2vw
+    .container
+      height: 4em
+      padding-top: 1.5em
+    .menu-line
+      font-size: 1.3em
+    .menu-wrap
+      font-size: 0.85em
+      ul
+        top: 10%
+      &::after
+        bottom: 4em
+      .container
+        padding-top: 4em
+        padding-bottom: 4em
+        min-height: 55vw
+  .home
+    font-size: 1.8vw
+    .container
+      padding-top: 4em
+      padding-bottom: 4em
+      min-height: 55vw
+      &::after
+        bottom: 4em
+    &-names
+      top: 35.0952%
+      padding-left: 5em
+      &-item
+        margin-right: 1.2em
+    &-text
+      top: 62.7142%
+      padding-left: 7.3em
+    &-ctrl
+      font-size: 18px
+      top: 18.1904%
+    &-link a b
+      display: none
+
+@media screen and (max-width: 567px)
+  .header
+    font-size: 4vw
+    .container
+      height: 4em
+      padding-top: 1.5em
+    .logo
+      margin-top: 0px
+    .menu
+      &-wrap
+        background-position: right
+        ul
+          top: 20%
+          height: 60%
+          max-height: none
+          align-items: flex-start
+          li
+            font-size: 12.5vw
+            a
+              -webkit-text-stroke-width: 1.5px
+      &-line
+        .loc, .phone
+          display: none
+        .soc
+          font-size: 20px
+          left: 0
+          transform: none
+          a
+            margin: 0 30px 0 0
+            &:first-child
+              margin-top: -2px
+  .home
+    font-size: 4vw
+    &-left, &-leftbg
+      width: 100%
+      bottom: 65%
+    &-leftbg
+      opacity: 0.5
+    &-bgs
+      top: 35%
+      bottom: 0
+      height: auto
+    .container
+      padding-top: 4em
+      padding-bottom: 4em
+      min-height: 55vw
+      &::before
+        display: none
+      &::after
+        bottom: 4em
+    &-names
+      font-size: 0.8em
+      top: 18%
+      padding-left: 0
+      &-item
+        margin-right: 1.2em
+        -webkit-text-stroke-width: 1.5px
+    &-link
+      left: 50%
+    &-text
+      top: 40%
+      padding-left: 1.5em
+      font-size: 16px
+    &-counter
+      width: auto
+      display: flex
+      align-items: center
+      span
+        &:first-child
+          font-size: 16px
+          margin-right: 5px
+        &:last-child
+          font-size: 11px
+          opacity: 0.5
+      &::after
+        display: none
+    &-share img
+      height: 20px
+      width: auto
+    &-ctrl
+      font-size: 20px
+      top: 5%
+    &-link a b
+      display: none
