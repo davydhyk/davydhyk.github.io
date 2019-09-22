@@ -1,0 +1,279 @@
+.news
+  font-size: 1.04166vw
+  background-color: #0f1110
+  position: relative
+  overflow: hidden
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 50%
+    border-top: 1px solid rgba(#fff, 0.1)
+    background-size: cover
+    background-position: center
+    background-image: url(../img/news-bg.png)
+  &::after
+    content: ''
+    position: absolute
+    bottom: 5.95em
+    left: 0
+    height: 1px
+    width: 100%
+    background-color: rgba(#fff, 0.1)
+  .container
+    height: 100vh
+    min-height: 46.875vw
+    position: relative
+    padding-top: 6em
+    padding-bottom: 5.95em
+    &::before, &::after
+      content: ''
+      position: absolute
+      top: 0
+      height: 100%
+      width: 1px
+      background-color: rgba(#fff, 0.1)
+    &::before
+      left: 58.6%
+    &::after
+      right: 58.6%
+  .wrap
+    width: 100%
+    height: 100%
+    position: relative
+    &::before, &::after
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      height: 200%
+      width: 1px
+      background-color: rgba(#fff, 0.1)
+    &::before
+      left: 0
+    &::after
+      right: -1px
+  &-ctrl
+    position: absolute
+    top: 2.5em
+    z-index: 2
+    opacity: 0.7
+    img
+      transition: 0.2s
+      @media screen and (min-width: 1921px)
+        width: 1em
+    &:not(.slick-disabled)
+      cursor: pointer
+      opacity: 1
+      &:hover img
+        transform: scale(1.2)
+    &.left
+      left: 0
+      img
+        transform-origin: left
+    &.right
+      right: 0
+      img
+        transform-origin: right
+  &-list
+    position: absolute
+    left: 18%
+    right: 0
+    bottom: 0
+    z-index: 1
+    height: 92.7%
+    a
+      outline: none
+    .slick-track
+      display: flex
+      align-items: center
+    .slick-list, .slick-track
+      height: 100%
+    &-item
+      width: 21.4em
+      height: 8.35em
+      display: flex
+      flex-direction: column
+      margin-right: 5.85em
+      outline: none
+      position: relative
+      transition: 0.8s
+      &:nth-child(odd)
+        flex-direction: column-reverse
+      &.slick-active
+        height: 100%
+        .title
+          opacity: 0.7
+        .desc
+          opacity: 0.7
+        .image
+          height: 71.8%
+        &:nth-child(odd)
+          .text
+            top: -0.65em
+          .image
+            margin-top: 2.3em
+        &:nth-child(even)
+          .image
+            margin-bottom: 2.3em
+      &.slick-active:hover
+        .image
+          .date
+            opacity: 1
+          span
+            padding-left: 3em
+            width: 8.375em
+            &::before
+              width: 1.25em
+        .title
+          -webkit-text-fill-color: #fff
+          -webkit-text-stroke: 0px
+          opacity: 1
+        .desc
+          opacity: 1
+      .text
+        position: relative
+        transition: 0.8s
+      .title
+        overflow: hidden
+        opacity: 0.2
+        display: block
+        height: 2.45714em
+        font-size: 1.75em
+        font-weight: 700
+        line-height: 1.2285
+        -webkit-text-fill-color: transparent
+        -webkit-text-stroke: 1px #fff
+        transition: 0.2s
+      .desc
+        overflow: hidden
+        opacity: 0.2
+        margin-top: 2.16665em
+        height: 2.3335em
+        font-size: 0.9em
+        line-height: 1.1667
+        transition: 0.2s
+      .image
+        position: relative
+        display: block
+        width: 100%
+        height: 0
+        background-size: cover
+        background-position: center
+        overflow: hidden
+        transition: 0.8s
+        &::before
+          content: ''
+          position: absolute
+          left: 0
+          top: 0
+          right: 0
+          bottom: 0
+          background-color: rgba(#000, 0.6)
+        .date
+          opacity: 0.7
+          transition: 0.2s
+          position: absolute
+          top: 3.3em
+          left: 3.3em
+          font-size: 0.9em
+          font-weight: 500
+          line-height: 1
+          display: flex
+          align-items: center
+          img
+            margin-right: 1.1667em
+            height: 1.38889em
+        span
+          padding-left: 3em
+          position: absolute
+          left: 50%
+          bottom: 0
+          font-size: 0.8em
+          font-weight: 700
+          transform: rotate(-90deg)
+          transform-origin: left bottom
+          transition: 0.2s
+          display: block
+          overflow: hidden
+          width: 0
+          padding-left: 0
+          &::before
+            position: absolute
+            top: 50%
+            left: 0
+            content: ''
+            width: 0
+            height: 3px
+            background-color: #fff
+            transition: 0.2s
+
+@media screen and (max-width: 1440px)
+  .news
+    font-size: 1.25vw
+
+@media screen and (max-width: 1024px)
+  .news
+    font-size: 1.56vw
+    &::after
+      bottom: 5em
+    .container
+      padding-top: 5em
+      padding-bottom: 5em
+      min-height: 70vw
+    &-list
+      left: 10%
+
+@media screen and (max-width: 567px)
+  .news
+    font-size: 3.65vw
+    &-list
+      left: 13%
+      &-item
+        width: 18.56em
+        height: 100%
+        margin-right: 1.535em
+        transform: scale(0.8)
+        .image
+          height: 100%
+          span::before
+            width: 0
+        .text
+          top: 0
+          overflow: hidden
+          height: 0
+        &:nth-child(odd)
+          .image
+            margin-top: 0
+        &:nth-child(even)
+          .image
+            margin-bottom: 0
+        &.slick-active
+          transform: none
+          .image
+            height: 71.8%
+            span
+              padding-left: 3em
+              width: 8.375em
+              &::before
+                width: 1.25em
+            .date
+              opacity: 1
+          .text
+            height: 8.22034em
+          .title
+            -webkit-text-fill-color: #fff
+            -webkit-text-stroke: 0px
+            opacity: 1
+          .desc
+            opacity: 1
+          &:nth-child(odd)
+            .text
+              top: 0
+            .image
+              margin-top: 2.3em
+          &:nth-child(even)
+            .image
+              margin-bottom: 2.3em

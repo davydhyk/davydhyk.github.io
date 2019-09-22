@@ -51,8 +51,31 @@
     }, trsDuration);
   });
 
+  $('.news-list').slick({
+    variableWidth: true,
+    infinite: false,
+    prevArrow: $('.news-ctrl.left'),
+    nextArrow: $('.news-ctrl.right'),
+    focusOnSelect: true,
+    slidesToShow: 2,
+    speed: 800,
+    responsive: [
+      {
+        breakpoint: 567,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
   $('.menu > img').click(function () {
     $(this).parent().toggleClass('active');
+    if ($(this).parent().hasClass('active')) {
+      $('body, html').css({'height': $('.menu-wrap').height(), 'overflow': 'scroll'});
+    } else {
+      $('body, html').removeAttr('style');
+    }
   });
 
   $('section.form form .left .input input').on('input', function () {

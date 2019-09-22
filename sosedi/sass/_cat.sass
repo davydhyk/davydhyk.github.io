@@ -1,0 +1,224 @@
+.cat
+  font-size: 1.041667vw
+  position: relative
+  overflow: hidden
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background-color: rgba(#000, 0.6)
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 5.95em
+    width: 100%
+    height: 1px
+    background-color: rgba(#fff, 0.1)
+  .container
+    height: 100vh
+    min-height: 46.875vw
+    position: relative
+    padding-top: 6em
+    padding-bottom: 5.95em
+  .wrap
+    height: 100%
+    width: 100%
+    position: relative
+    display: flex
+    &::before, &::after
+      content: ''
+      position: absolute
+      top: 50%
+      width: 1px
+      height: 200%
+      transform: translateY(-50%)
+      background-color: rgba(#fff, 0.1)
+    &::before
+      left: 0
+    &::after
+      right: -1px
+  &-bg
+    position: absolute
+    top: 0
+    bottom: 0
+    z-index: -1
+    background-size: cover
+    &.left
+      left: 0
+      right: 50%
+    &.right
+      left: 50%
+      right: 0
+  &-item
+    width: 50%
+    &:first-child
+      padding-right: 6.9em
+      a::before
+        right: 0
+    &:last-child
+      padding-left: 6.9em
+      a::before
+        left: 0
+    &-wrap
+      position: absolute
+      top: 50.3%
+      left: 50%
+      transform: translate(-50%, -50%)
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      transition: 0.5s
+    a
+      display: block
+      width: 100%
+      height: 100%
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        right: 0
+        width: 1px
+        height: 200%
+        transform: translateY(-50%)
+        background-color: rgba(#fff, 0.1)
+      &:hover
+        .cat-item-wrap
+          top: 38.6%
+        .chart
+          opacity: 1
+          img
+            transform: none
+        img
+          opacity: 1
+        .title
+          opacity: 1
+          -webkit-text-fill-color: #fff
+          -webkit-text-stroke: 0px
+        span
+          opacity: 1
+        .link
+          padding-left: 3.0625em
+          width: 12.1em
+          &::before
+            width: 1.25em
+      .chart
+        opacity: 0
+        transition: 0.5s
+        position: absolute
+        top: 0
+        right: 0
+        width: 3.3125em
+        height: 3.3125em
+        font-size: 0.8em
+        font-weight: 700
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+          transform: rotate(54deg)
+          transition: 0.9s
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+      img
+        width: 10.15em
+        opacity: 0.7
+        transition: 0.5s
+      .title
+        margin-top: 0.83em
+        margin-bottom: 0.3em
+        opacity: 0.7
+        transition: 0.5s
+        font-size: 4em
+        font-weight: 700
+        -webkit-text-fill-color: transparent
+        -webkit-text-stroke: 2px #fff
+      span
+        opacity: 0.7
+        transition: 0.5s
+        font-size: 0.9em
+        font-weight: 700
+      .link
+        overflow: hidden
+        white-space: nowrap
+        padding-left: 0
+        width: 0
+        position: absolute
+        bottom: 0
+        left: 51.4%
+        font-size: 0.8em
+        font-weight: 700
+        transform-origin: left bottom
+        transform: rotate(-90deg)
+        transition: 0.5s
+        &::before
+          content: ''
+          position: absolute
+          top: 50%
+          left: 0
+          height: 0.1875em
+          width: 0
+          background-color: #fff
+          transition: 0.5s
+
+@media screen and (max-width: 1024px)
+  .cat
+    font-size: 1.56vw
+    &::after
+      bottom: 5.1em
+    .container
+      padding-top: 5.1em
+      padding-bottom: 5.1em
+      min-height: 56vw
+    &-item
+      &:first-child
+        padding-right: 5.1em
+      &:last-child
+        padding-left: 5.1em
+      a
+        .title
+          font-size: 3.6em
+        .link b
+          display: none
+
+@media screen and (orientation: portrait)
+  .cat
+    font-size: 2vw
+    .wrap
+      flex-direction: column
+    &-bg
+      &.left
+        bottom: 50%
+        right: 0
+      &.right
+        top: 50%
+        left: 0
+    &-item
+      width: 100%
+      height: 50%
+      &:first-child, &:last-child
+        padding: 0
+
+@media screen and (max-width: 567px)
+  .cat
+    font-size: 3vw
+    &-item
+      width: 100%
+      height: 50%
+      a
+        &:hover .cat-item-wrap
+          top: 50.3%
+        &::before
+          display: none
+        .link
+          display: none
+        .title
+          -webkit-text-stroke: 1px #fff
