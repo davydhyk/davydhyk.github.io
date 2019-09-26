@@ -1,0 +1,238 @@
+.subcat
+  font-size: 1.041667vw
+  background-color: #0f1110
+  position: relative
+  overflow: hidden
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 57.2%
+    background-image: url(../img/about-bg.png)
+    background-size: cover
+    border-left: 1px solid rgba(#fff, 0.1)
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    right: 57.2%
+    width: 1px
+    height: 100%
+    background-color: rgba(#fff, 0.1)
+  .container
+    height: 100vh
+    min-height: 46.875vw
+    position: relative
+    padding-top: 6em
+    padding-bottom: 5.95em
+    &::before
+      content: ''
+      position: absolute
+      left: 50%
+      bottom: 5.95em
+      width: 100vw
+      height: 1px
+      transform: translateX(-50%)
+      background-color: rgba(#fff, 0.1)
+  .wrap
+    position: relative
+    width: 100%
+    height: 100%
+    &::before, &::after
+      content: ''
+      position: absolute
+      top: 50%
+      width: 1px
+      height: 200%
+      transform: translateY(-50%)
+      background-color: rgba(#fff, 0.1)
+    &::before
+      left: 0
+    &::after
+      right: -1px
+  &-ctrl
+    font-size: 20px
+    position: absolute
+    top: 7.3%
+    right: 0
+    width: 6.25em
+    display: flex
+    justify-content: space-between
+    @media screen and (min-width: 1921px)
+      font-size: 1.041667vw
+    img
+      opacity: 0.7
+      transition: 0.2s
+      width: 1em
+      &:nth-child(1)
+        transform-origin: left
+      &:nth-child(2)
+        transform-origin: right
+      &:not(.slick-disabled)
+        opacity: 1
+        cursor: pointer
+        &:hover
+          transform: scale(1.2)
+  &-list
+    position: absolute
+    left: -2.95em
+    right: -2.95em
+    bottom: 0
+    z-index: 1
+    height: 84.6%
+    display: flex
+    *
+      outline: none
+    .slick-list
+      height: 100%
+      max-width: 100%
+    .slick-track
+      height: 100%
+    .slick-track
+      display: flex
+    &-item
+      padding: 0 2.95em
+      height: 100%
+      a
+        display: block
+        // min-width: 21.4em
+        width: 100%
+        height: 100%
+        position: relative
+        background-size: cover
+        &::before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background-color: rgba(#000, 0.6)
+        &:hover
+          .chart
+            opacity: 1
+          .title
+            bottom: 70%
+            opacity: 1
+            -webkit-text-fill-color: #fff
+            -webkit-text-stroke: 0px
+          span
+            width: 8.4375em
+            padding-left: 3.0625em
+            &::before
+              width: 1.25em
+        .title
+          pointer-events: none
+          position: absolute
+          bottom: 11.9%
+          left: -1.18571em
+          font-size: 3.5em
+          font-weight: 700
+          -webkit-text-fill-color: transparent
+          -webkit-text-stroke: 2px #fff
+          opacity: 0.7
+          transition: 0.6s
+          @media screen and (max-width: 1670px)
+            left: -15px
+          @media screen and (max-width: 1024px)
+            left: -10px
+            -webkit-text-stroke: 1px
+        span
+          position: absolute
+          bottom: 0
+          left: 52%
+          font-size: 0.8em
+          font-weight: 700
+          overflow: hidden
+          transition: 0.5s
+          transform-origin: left bottom
+          transform: rotate(-90deg)
+          width: 0
+          padding-left: 0
+          &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 0
+            width: 0
+            height: 3px
+            background-color: #fff
+            transition: 0.5s
+        .chart
+          position: absolute
+          bottom: 69%
+          left: 110%
+          width: 3.3125em
+          height: 3.3125em
+          font-size: 0.2285714em
+          font-weight: 700
+          display: flex
+          align-items: center
+          justify-content: center
+          transition: 0.2s
+          transition-delay: 0.4s
+          opacity: 0
+          -webkit-text-stroke: 0px
+          -webkit-text-fill-color: #fff
+          img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+
+@media screen and (max-width: 1024px)
+  .subcat
+    font-size: 1.25vw
+    .container
+      min-height: 56vw
+    &-list
+      left: -2em
+      right: -2em
+      &-item
+        padding: 0 2em
+
+@media screen and (max-width: 768px)
+  .subcat
+    font-size: 1.7vw
+    .container
+      min-height: 70vw
+
+@media screen and (max-width: 567px)
+  .subcat
+    font-size: 2.6vw
+    &::before
+      left: 42.8%
+    &::after
+      right: 42.8%
+      left: auto
+    &-list
+      left: 2.1em
+      right: 2.1em
+      bottom: 12%
+      height: 61.9%
+      &-item
+        padding: 0 2.1em
+        &.slick-active a
+          .chart
+            opacity: 1
+          .title
+            bottom: 70%
+            opacity: 1
+            -webkit-text-fill-color: #fff
+            -webkit-text-stroke: 0px
+          span
+            width: 8.4375em
+            padding-left: 3.0625em
+            &::before
+              width: 1.25em
+        a
+          .title
+            font-size: 4em
+          span
+            font-size: 16px
+          .chart
+            font-size: 0.31em
+            left: 100%
