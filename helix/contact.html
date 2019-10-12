@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#13183f">
   <title>Helix</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -27,6 +28,7 @@
       <div class="wrap">
         <div class="logo"><a href="#"><img src="img/logo.svg" alt=""></a></div>
         <div class="menu">
+          <div class="menu-mob"><img src="img/menu.svg" alt=""><span></span></div>
           <nav>
             <ul>
               <li><a href="#">Catalyst</a></li>
@@ -102,37 +104,39 @@
   
   <section class="contact">
     <div class="container">
-      <div class="contact-text">
-        <div class="title">contact us</div>
-        <div class="text">Each message in the HeliztxNetwork receives a tamper-proof delivery certificate powered by a performant HelixMesh consensus protocol</div>
-      </div>
-      <div class="contact-form">
-        <form>
-          <div class="left">
-            <label>
-              <img src="img/icons/user.svg" alt="">
-              <span><input type="text" value="Jeremy Brady"></span>
-            </label>
-            <label>
+      <div class="wrap">
+        <div class="contact-text">
+          <div class="title">contact us</div>
+          <div class="text">Each message in the HeliztxNetwork receives a tamper-proof delivery certificate powered by a performant HelixMesh consensus protocol</div>
+        </div>
+        <div class="contact-form">
+          <form>
+            <div class="left">
+              <label>
+                <img src="img/icons/user.svg" alt="">
+                <span><input type="text" value="Jeremy Brady"></span>
+              </label>
+              <label>
+                <img src="img/icons/at.svg" alt="">
+                <span><input type="text" placeholder="E-mail"></span>
+              </label>
+              <label>
+                <img src="img/icons/topic.svg" alt="">
+                <span><select>
+                  <option value="Subject" selected hidden>Subject</option>
+                  <option value="Topic">Topic</option>
+                  <option value="Topic">Topic</option>
+                  <option value="Topic">Topic</option>
+                </select></span>
+              </label>
+            </div>
+            <div class="right">
               <img src="img/icons/at.svg" alt="">
-              <span><input type="text" placeholder="E-mail"></span>
-            </label>
-            <label>
-              <img src="img/icons/topic.svg" alt="">
-              <span><select>
-                <option value="Subject" selected hidden>Subject</option>
-                <option value="Topic">Topic</option>
-                <option value="Topic">Topic</option>
-                <option value="Topic">Topic</option>
-              </select></span>
-            </label>
-          </div>
-          <div class="right">
-            <img src="img/icons/at.svg" alt="">
-            <span><textarea placeholder="E-mail"></textarea></span>
-            <input class="btn yellow" type="submit" value="Send">
-          </div>
-        </form>
+              <span><textarea placeholder="E-mail"></textarea></span>
+              <input class="btn yellow" type="submit" value="Send">
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -167,6 +171,9 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
