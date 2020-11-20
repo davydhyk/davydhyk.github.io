@@ -1,0 +1,80 @@
+@import fonts
+
+body
+  margin: 0
+  color: #3b3b3b
+  font-family: Gilroy, sans-serif
+  font-size: 20px
+  background-color: #fff
+  position: relative
+  @media screen and (min-width: 1921px)
+    font-size: 1.041667vw
+  // @media screen and (max-width: 1330px)
+  //   font-size: 1.50375vw
+  @media screen and (max-width: 1024px)
+    font-size: 1.953125vw
+  @media screen and (max-width: 768px)
+    font-size: 2.604167vw
+  @media screen and (max-width: 425px)
+    font-size: 3.2vw
+
+// ::-webkit-scrollbar
+//   display: none
+
+%rockwell
+  font-family: Rockwell, sans-serif
+
+%gilroy
+  font-family: Gilroy, sans-serif
+
+a
+  color: inherit
+  text-decoration: none
+
+figure
+  margin: 0
+
+*, *::before, *::after
+  box-sizing: border-box
+
+.container
+  max-width: 1330px
+  width: 100%
+  padding: 0 15px
+  margin: 0 auto
+  @media screen and (min-width: 1921px)
+    max-width: 66.5em
+    padding: 0 0.75em
+  @media screen and (max-width: 768px)
+    padding: 0 20px
+
+div.wpcf7 .ajax-loader, div.wpcf7-response-output, .grecaptcha-badge
+  display: none !important
+
+@import components
+  
+@import header
+@import footer
+@import 404
+@import contacts
+@import article_full
+@import article
+@import project
+@import price
+@import home
+@import demo
+@import cost
+@import advant
+@import staff
+@import prod
+@import services
+@import service
+@import project_structure
+@import gallery
+@import tech
+@import about
+@import modal_req
+@import modal_reqcall
+@import modal_thank
+@import modal_inprice
+@import modal_staffinfo

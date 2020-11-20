@@ -1,0 +1,65 @@
+.req
+  .modal-content
+    padding: 2.8em 2.25em
+    width: 24.1em
+    max-width: 100%
+    @media screen and (min-width: 1921px)
+      font-size: 1.04166vw
+    @media screen and (max-width: 511px)
+      padding: 10.9375vw 8.7890625vw
+      // font-size: 3.90625vw
+    &.paper
+      background-size: 8.6em
+      background-image: url(../img/modal-paper-pen.png)
+      background-repeat: no-repeat
+      background-position: top 0% right 8.6%
+    &.branch-sm
+      background-size: 8.2em
+      background-image: url(../img/modal-branch.png)
+      background-repeat: no-repeat
+      background-position: top 0% right 29%
+      @media screen and (max-width: 511px)
+        background-size: 32.03125vw
+  &-form
+    margin-top: 1.45em
+    form
+      width: 100%
+    .labels
+      margin-bottom: 1.35em
+      label
+        margin-top: 0.75em
+        display: block
+    .btns
+      // margin-bottom: 0.675em
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+      .btn
+        flex-shrink: 0
+      input
+        appearance: none
+        display: none
+      label
+        cursor: pointer
+        margin-bottom: 1.35em
+        &.btn
+          margin-right: 1.35em
+          @media screen and (max-width: 375px)
+            margin-right: 0.5em
+        &.file
+          display: flex
+          align-items: center
+          flex-grow: 1
+          max-width: 16.916em
+          font-size: 0.6em
+          font-weight: 700
+          letter-spacing: 0.05em
+          text-transform: uppercase
+          opacity: 0.3
+          transition: 0.2s
+          &:hover
+            opacity: 0.7
+          img
+            margin-right: 0.833em
+            height: 1.666em

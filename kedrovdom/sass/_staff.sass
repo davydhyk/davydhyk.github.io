@@ -1,0 +1,129 @@
+.staff
+  padding-top: 5.2em
+  &-title
+    @extend %rockwell
+    font-size: 1.7em
+    line-height: 1.47
+  &-list
+    margin-top: 2.95em
+    display: flex
+    justify-content: space-between
+    &-line
+      flex: 0 0 1px
+      background-color: #eee
+    &-item
+      text-align: center
+      .image
+        line-height: 0
+        width: 7.5em
+        height: 7.5em
+        margin: 0 auto
+        border-radius: 50%
+        overflow: hidden
+        background-size: cover
+        background-position: center
+      .name
+        margin-top: 1.75em
+        @extend %rockwell
+        font-size: 1em
+      .role
+        margin-top: 1.8125em
+        padding: 0.5625em 1.875em 0.687em
+        display: inline-flex
+        background-color: #efefef
+        color: #919191
+        font-size: 0.8em
+        font-weight: 600
+        line-height: 1.25
+        border-radius: 2.5em
+        cursor: pointer
+        transition: 0.2s
+        &::before
+          transition: 0.2s
+      &:hover .role
+        color: #fff
+        background-image: linear-gradient(251deg, #8d6042 0%, #72462a 100%)
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          z-index: -1
+          left: 6%
+          width: 88%
+          height: 1em
+          position: absolute
+          transition: 0.2s
+          box-shadow: 0 0.41em 2.916em #8b5f41
+          border-radius: 20%
+      .worktime
+        margin-top: 1.5em
+        color: #8e6042
+        font-size: 12px
+        font-weight: 700
+        line-height: 1.25
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        @media screen and (min-width: 1921px)
+          font-size: 0.6em
+  &-btn
+    margin-top: 3em
+
+@media screen and (max-width: 768px)
+  .staff
+    &-list
+      flex-wrap: wrap
+      // display: grid
+      // grid-template-columns: repeat(2, 1fr)
+      > div
+        padding: 1.5em 0
+        border-top: 1px solid #eee
+        &:nth-child(1), &:nth-child(3)
+          border-top-color: rgba(#000, 0)
+        &:nth-child(4n+3)
+          border-left: 1px solid #eee
+      &-item
+        width: 50%
+      &-line
+        display: none
+    &-btn
+      margin-top: 1.5em
+
+@media screen and (max-width: 425px)
+  .staff
+    padding-top: 5.833em
+    &-title
+      font-size: 2.5em
+      line-height: 1.333
+      text-align: center
+    &-list
+      display: block
+      > div
+        padding: 2.5em 0
+        border-top: 1px solid #eee
+        &:nth-child(1)
+          border-top-color: rgba(#000, 0)
+        &:nth-child(3)
+          border-top-color: #eee
+        &:nth-child(4n+3)
+          border-left: none
+      &-item
+        width: 100%
+        .image
+          width: 12.5em
+          height: 12.5em
+        .name
+          margin-top: 1.045em
+          font-size: 1.833em
+          line-height: 1.272
+        .role
+          padding: 0.64em 1.428em
+          font-size: 1.166em
+          font-weight: 600
+        .worktime
+          margin-top: 1.266em
+          font-size: 1.25em
+          letter-spacing: 0.02em
+    &-btn
+      margin-top: 4.166em
+      text-align: center

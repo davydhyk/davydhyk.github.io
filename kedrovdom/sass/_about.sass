@@ -1,0 +1,246 @@
+.about
+  padding-bottom: 12.4em
+  background-image: url(../img/about-bg.png)
+  background-size: cover
+  background-position: center
+  @media screen and (min-width: 1700px)
+    padding-top: 7.75em
+    background-image: url(../img/about-bg-new.png)
+  h1
+    margin: 1.441em 0 0
+    @extend %rockwell
+    font-size: 1.7em
+    font-weight: 400
+  p
+    margin: 1.6875em 0 3.437em
+    color: #8e6042
+    font-size: 0.8em
+    font-weight: 500
+    line-height: 1.75
+    letter-spacing: 0.025em
+  &-btn
+    position: relative
+    z-index: 1
+  &-shadow
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 11.071%
+      left: 0.5385%
+      width: 98.923%
+      height: 86.4285%
+      box-shadow: 0 0.5em 2.25em rgba(#000, 0.07)
+      border-radius: 10px
+      @media screen and (min-width: 1921px)
+        border-radius: 0.5em
+  &-text
+    margin-top: -9.35em
+    &-wrap
+      padding: 1.15em 1.5em
+      position: relative
+      z-index: 1
+      background-color: #fff
+      border-radius: 10px
+      @media screen and (min-width: 1921px)
+        border-radius: 0.5em
+    .title
+      margin-bottom: 0.964em
+      @extend %rockwell
+      font-size: 1.4em
+      font-weight: 400
+    p
+      margin: 0 0 1.75em
+      font-size: 0.8em
+      font-weight: 500
+      line-height: 1.75
+      letter-spacing: 0.025em
+      &:last-child
+        margin-bottom: 0
+
+.qa
+  padding-top: 5.45em
+  &-title
+    @extend %rockwell
+    font-size: 1.7em
+    font-weight: 400
+    line-height: 1.47
+  p
+    margin: 1.625em 0 0
+    color: #8e6042
+    font-size: 0.8em
+    font-weight: 500
+    line-height: 1.75
+    letter-spacing: 0.025em
+  &-wrap
+    margin-top: 2.75em
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &-list
+    flex-grow: 1
+  &-question
+    margin-top: 1.5em
+    position: relative
+    cursor: pointer
+    transition: 0.3s
+    &::before
+      content: ''
+      position: absolute
+      top: 0.2em
+      left: 2.51656%
+      width: 94.96688%
+      height: 76%
+      border-radius: 10px
+      transition: 0.2s
+      @media screen and (min-width: 1921px)
+        border-radius: 0.5em
+    &:first-child
+      margin-top: 0
+    &-wrap
+      padding: 1em 3em
+      min-height: 5em
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border: 1px solid #f7f7f7
+      position: relative
+      z-index: 1
+      background-color: #fff
+      border-radius: 10px
+      @media screen and (min-width: 1921px)
+        border-radius: 0.5em
+      span
+        @extend %rockwell
+        font-size: 1em
+        line-height: 1.272
+      img
+        width: 0.45em
+        transform: rotate(90deg)
+        transition: 0.2s
+    &:hover, &.active
+      &::before
+        box-shadow: 0 0.5em 2.25em rgba(#000, 0.07)
+    &.active
+      margin-bottom: 1.3em
+      img
+        transform: rotate(-90deg)
+  &-answer
+    display: none
+    padding: 0 3.75em 0
+    color: #8e6042
+    font-size: 0.8em
+    font-weight: 500
+    line-height: 1.75
+    letter-spacing: 0.025em
+  &-owner
+    margin-top: 3px
+    margin-left: 3em
+    flex: 0 0 37.307%
+    height: 31em
+    text-align: right
+    position: relative
+    @media screen and (max-width: 1100px)
+      flex: 0 0 40%
+    > img
+      height: 100%
+    &-text
+      position: absolute
+      top: 2.6em
+      left: 0
+      text-align: left
+      .name
+        @extend %rockwell
+        font-size: 1em
+      .role
+        margin-top: 0.625em
+        color: #8e6042
+        font-size: 0.8em
+        font-weight: 500
+        letter-spacing: 0.025em
+      .sign
+        margin-top: 0.5em
+        text-align: center
+        img
+          width: 8.1em
+
+@media screen and (max-width: 768px)
+  .qa
+    &-wrap
+      flex-wrap: wrap
+      justify-content: center
+    &-owner
+      margin-top: 1.5em
+      margin-left: 0
+      padding-left: 3em
+      flex: 0 0 auto
+
+@media screen and (max-width: 425px)
+  .about
+    padding-bottom: 12em
+    text-align: center
+    background-position: bottom left 33%
+    background-size: auto 52.745%
+    background-repeat: no-repeat
+    h1
+      margin-top: 1em
+      font-size: 2.5em
+    p
+      margin-top: 1.1em
+      margin-bottom: 2.272em
+      font-size: 1.833em
+      br
+        display: none
+    .btn
+      font-size: 1.166em
+    &-text
+      margin-top: -6.9166em
+      &-wrap
+        padding: 1em 1.667em
+      .title
+        font-size: 1.833em
+      p
+        font-size: 1.25em
+  .qa
+    &-wrap
+      flex-wrap: wrap-reverse
+    &-title
+      font-size: 2.5em
+      text-align: center
+    p
+      font-size: 1.833em
+      line-height: 1.272
+      text-align: center
+    &-owner
+      margin-left: -20px
+      margin-right: -20px
+      padding: 0
+      height: auto
+      flex: 0 0 calc(100% + 40px)
+      overflow: hidden
+      > img
+        width: 25.5em
+        margin-right: -4.25em
+      &-text
+        left: 20px
+        .name
+          font-size: 1.833em
+        .role
+          font-size: 1.25em
+        .sign
+          text-align: left
+          img
+            width: 11.416em
+    &-list
+      margin-top: 3em
+    &-question
+      &-wrap
+        padding: 1.166em 1.666em
+        span
+          font-size: 1.833em
+          line-height: 1.272
+        img
+          flex: 0 0 0.55083em
+    &-answer
+      padding: 0 1.333em
+      font-size: 1.25em

@@ -1,0 +1,135 @@
+.article-full
+  &-row
+    padding-top: 2.45em
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+  &-content
+    width: 65%
+    h1
+      margin: 0
+      @extend %rockwell
+      font-size: 1.7em
+      font-weight: 400
+      line-height: 1.47
+    .thumb
+      margin-top: 2.95em
+      border-radius: 10px
+      overflow: hidden
+      line-height: 0
+      @media screen and (min-width: 1921px)
+        border-radius: 0.5em
+      img
+        width: 100%
+    .add
+      margin-top: 1.5625vw
+      display: flex
+      align-items: center
+      font-size: 12px
+      @media screen and (min-width: 1921px)
+        font-size: 0.6em
+      .date
+        margin-left: -1px
+        display: flex
+        align-items: center
+        color: #8e6042
+        font-size: 1em
+        font-weight: 500
+        letter-spacing: 0.05em
+        img
+          margin-right: 0.8334em
+          height: 1.5em
+      .share
+        margin-left: 5em
+        display: inline-block
+        line-height: 0
+        @media screen and (max-width: 768px)
+          margin-left: 1.5em
+        img
+          height: 1.333em
+    .content
+      margin-top: 1.625em
+      font-size: 0.8em
+      font-weight: 500
+      line-height: 1.75
+      letter-spacing: 0.025em
+      p
+        margin-top: 0
+        margin-bottom: 1.75em
+  &-sidebar
+    width: 30.154%
+    .title
+      @extend %rockwell
+      font-size: 1.4em
+      line-height: 1.571
+      margin-bottom: 2.321em
+    .article
+      margin-bottom: 3em
+    .viewall
+      text-align: center
+
+@media screen and (max-width: 1024px)
+  .article-full
+    &-row
+      flex-wrap: wrap
+    &-content
+      width: 100%
+    &-sidebar
+      margin-top: 1em
+      width: 100%
+      &-wrap
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 3em
+      .title
+        margin-bottom: 1.5em
+
+@media screen and (max-width: 768px)
+  .article-full
+    &-row
+      padding-top: 0
+    &-content
+      .thumb
+        margin-top: 1.5em
+    &-sidebar
+      .title
+        text-align: center
+      &-wrap
+        margin: 0 auto
+        max-width: 425px
+        grid-template-columns: 1fr
+
+@media screen and (max-width: 425px)
+  .article-full
+    &-content
+      h1
+        font-size: 2.5em
+        line-height: 1.333
+        text-align: center
+      .thumb
+        margin-top: 4.166em
+      .add
+        margin-top: 1.333em
+        font-size: 1.25em
+        .date, .share
+          img
+            height: 1.333em
+      .content
+        margin-top: 3.333em
+        font-size: 1.25em
+        img
+          max-width: 100%
+    &-sidebar
+      margin-top: 1em
+      width: 100%
+      &-wrap
+        grid-gap: 2.5em
+      .title
+        margin-bottom: 0.909em
+        font-size: 1.833em
+        text-align: left
+      .article
+        margin-bottom: 0
+      .viewall
+        margin-top: 4.166em

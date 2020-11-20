@@ -1,0 +1,312 @@
+.footer
+  padding-top: 2.9em
+  padding-bottom: 1.6em
+  // box-shadow: 0 -15px 35px rgba(#000, 0.05)
+  background-color: #fff
+  // background-image: url(../img/footer-log.png)
+  // background-position: top left
+  // background-size: 14.479167vw auto
+  // background-repeat: no-repeat
+  position: relative
+  &::before, &::after
+    content: ''
+    position: absolute
+    left: 0
+    width: 100%
+    height: 100%
+  &::before
+    top: -0.75em
+    filter: blur(1.75em)
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(#000, 0.1) 48%, rgba(0, 0, 0, 0) 100%)
+  &::after
+    top: 0
+    background-color: #fff
+    background-image: url(../img/footer-log.png)
+    background-position: top left
+    background-size: 14.479167vw auto
+    background-repeat: no-repeat
+    @media screen and (max-width: 1600px)
+      background-image: none
+  .container
+    position: relative
+    z-index: 1
+  &-row
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+    nav
+      ul
+        li
+          margin-bottom: 1.875em
+          color: #919191
+          font-size: 0.8em
+          font-weight: 600
+          line-height: 1
+          transition: 0.2s
+          &:hover
+            color: #3b3b3b
+    > ul
+      .footer-soc
+        display: none
+      li
+        margin-bottom: 1.625em
+        &:not(.footer-soc)
+          padding-left: 1.875em
+          font-size: 0.8em
+          font-weight: 500
+          position: relative
+          br
+            display: none
+          &:nth-child(2)
+            @extend %rockwell
+            font-weight: 400
+          img
+            height: 1em
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+          a.whatsapp
+            margin-left: 0.876em
+            line-height: 1.3125
+            @media screen and (max-width: 445px)
+              display: none
+            img
+              position: static
+              transform: none
+              height: 1em
+    .menu
+      display: none
+  &-soc
+    text-align: right
+    > a
+      display: inline-block
+      margin-left: 1.5em
+      img
+        height: 0.8em
+      &.whatsapp
+        @media screen and (min-width: 446px)
+          display: none
+  &-map
+    padding-top: 3em
+    padding-bottom: 2.3em
+    position: relative
+    #map
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      .img-wraper
+        margin-bottom: 2.65em
+        width: 2.65em !important
+        height: auto !important
+      .gmnoprint, .gm-style-cc
+        display: none
+      img[src*="mark-2.svg"]
+        transform: translateY(50%)
+    &-form
+      position: relative
+      z-index: 1
+      margin-left: auto
+      margin-right: 2.1em
+      padding: 2em 2.25em 2.1em
+      max-width: 24.1em
+      border-radius: 0.5em
+      background-color: #fff
+      box-shadow: 0 0.75em 1.75em rgba(0, 0, 0, 0.05)
+      .title
+        @extend %rockwell
+        line-height: 1.3
+      .labels
+        margin-top: 1.5em
+        margin-bottom: 1.5em
+        label
+          margin-bottom: 0.75em
+          display: block
+          > span
+            display: block
+            position: relative
+            line-height: 0
+            span
+              position: absolute
+              bottom: 0
+              left: 0
+              font-size: 12px
+              line-height: 1.2
+              transform: translateY(110%)
+          input, textarea
+            outline: none
+            appearance: none
+            padding-left: 1.1875em
+            padding-right: 1.1875em
+            width: 100%
+            @extend %gilroy
+            font-size: 0.8em
+            font-weight: 500
+            border: 1px solid rgba(#8D6042, 0.25)
+            letter-spacing: 0.025em
+            border-radius: 0.625em
+            &::placeholder
+              opacity: 0.3
+          input
+            height: 3.125em
+          textarea
+            padding-top: 0.687em
+            padding-bottom: 0.687em
+            height: 11.25em
+            line-height: 1.75
+            resize: none
+      .btns
+        margin-bottom: 1.35em
+        display: flex
+        align-items: center
+        justify-content: space-between
+        input
+          appearance: none
+          display: none
+        label
+          cursor: pointer
+          &.btn
+            margin-right: 30px
+          &.file
+            display: flex
+            align-items: center
+            flex-grow: 1
+            max-width: 16.916em
+            font-size: 0.6em
+            font-weight: 700
+            letter-spacing: 0.05em
+            text-transform: uppercase
+            opacity: 0.3
+            transition: 0.2s
+            &:hover
+              opacity: 0.7
+            img
+              margin-right: 0.833em
+              height: 1.666em
+      .warn
+        font-size: 10px
+        font-weight: 500
+        line-height: 1.8
+        letter-spacing: 0.025em
+        opacity: 0.3
+        @media screen and (min-width: 1921px)
+          font-size: 0.5em
+
+@media screen and (max-width: 1024px)
+  .footer
+    &-map
+      &-form
+        margin-right: 0
+
+@media screen and (max-width: 768px)
+  .footer
+    font-size: 20px
+    &-row
+      flex-wrap: wrap
+      > .footer-soc
+        display: none
+      nav
+        display: none
+      > ul
+        width: 100%
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        .footer-soc
+          display: flex
+        li
+          width: 50%
+          &:nth-child(2)
+            letter-spacing: -0.05em
+      .menu
+        display: block
+        width: 100%
+        ul
+          display: flex
+          flex-wrap: wrap
+          align-items: center
+          li
+            width: 50%
+            color: #919191
+            font-size: 0.75em
+            font-weight: 600
+            letter-spacing: 0.02em
+            margin-bottom: 1.5em
+    &-soc a
+      margin-left: 0
+      margin-right: 1.5em
+      line-height: 0
+
+@media screen and (max-width: 425px)
+  .footer
+    font-size: 19px
+    &-map
+      padding: 0
+      &-form
+        margin-left: 0
+        padding: 2em 2.5em 2.5em
+        width: 100%
+        max-width: none
+        .title
+          font-size: 1.833em
+        .labels
+          margin: 2.5em 0
+          label
+            margin-bottom: 1.25em
+            input, textarea
+              font-size: 1.25em
+              line-height: 1.333
+        .btns
+          label
+            &.btn
+              margin-right: 2em
+            &.file
+              font-size: 1.1667em
+              img
+                height: 1.928em
+        .warn
+          font-size: 1.25em
+      #map
+        margin-top: -5.3333em
+        position: relative
+        height: 36.5em
+
+@media screen and (max-width: 425px)
+  .footer-row > ul li:not(.footer-soc)
+    padding-left: 1.6em
+
+@media screen and (max-width: 375px)
+  .footer
+    font-size: 5.06666vw
+
+
+.dreamhouse
+  padding-top: 3.75em
+  padding-bottom: 2.75em
+  .title
+    @extend %rockwell
+    font-size: 1.7em
+    line-height: 1.47
+  .text
+    margin-top: 1.562em
+    color: #8e6042
+    font-size: 0.8em
+    font-weight: 500
+    line-height: 1.75
+    letter-spacing: 0.025em
+
+@media screen and (max-width: 425px)
+  .dreamhouse
+    padding-top: 5.833em
+    text-align: center
+    .title
+      font-size: 2.5em
+    .text
+      font-size: 1.833em
+      line-height: 1.272

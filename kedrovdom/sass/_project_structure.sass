@@ -1,0 +1,369 @@
+.project-structure
+  &-price
+    display: none
+  &-top
+    margin-top: 2.5em
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .left
+      display: flex
+      align-items: center
+      .title
+        @extend %rockwell
+        font-size: 1.7em
+        line-height: 1
+        .share
+          display: none
+      .name
+        margin-top: 0.4375em
+        color: #8e6042
+        font-size: 0.8em
+        font-weight: 500
+        line-height: 1.75
+        letter-spacing: 0.025em
+      .share
+        margin-left: 3em
+        line-height: 0
+        transition: 0.2s
+        &:hover
+          transform: scale(1.1)
+        img
+          height: 1.5em
+    .right
+      display: flex
+      align-items: center
+      .price
+        margin-right: 1.5em
+        line-height: 1
+        @extend %rockwell
+        font-size: 1em
+        b
+          font-size: 1.5em
+          font-weight: 400
+  &-images
+    margin-top: 3.3em
+    &-grid
+      display: inline-grid !important
+      grid-gap: 3em
+      grid-template-columns: 54.769% 40.615%
+      grid-template-rows: 10.55em 10.55em
+      grid-template-areas: "a b" "a c"
+      outline: none
+      > div
+        background-size: cover
+        background-position: center
+        border-radius: 10px
+        cursor: pointer
+        @media screen and (min-width: 1921px)
+          border-radius: 0.5em
+        &:nth-child(1)
+          grid-area: a
+        &:nth-child(2)
+          grid-area: b
+        &:nth-child(3)
+          grid-area: c
+  &-controls
+    margin-top: 2.8em
+
+.params
+  padding-top: 3em
+  .wrap
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 8.8235%
+      left: 1.5385%
+      z-index: -1
+      width: 96.923%
+      height: 88.5294%
+      box-shadow: 0 0.5em 2.25em rgba(#000, 0.07)
+  &-wrap
+    padding: 2.6em 2.95em 2.95em
+    background-color: #fff
+    border-radius: 10px
+    border: 1px solid #f7f7f7
+    @media screen and (min-width: 1921px)
+      border-radius: 0.5em
+    .title
+      @extend %rockwell
+      font-size: 1.4em
+      line-height: 1.321
+  &-list
+    margin-top: 1.55em
+    display: grid
+    grid-template-columns: repeat(4, minmax(auto, 1fr))
+    grid-row-gap: 3em
+    justify-content: space-between
+    &-item
+      // width: 25%
+      display: flex
+      align-items: center
+      img
+        height: 1.5em
+        margin-right: 1.5em
+      .name
+        color: #8e6042
+        font-size: 0.8em
+        font-weight: 500
+        line-height: 1.1875
+        letter-spacing: 0.025em
+      .text
+        margin-top: 0.25em
+        @extend %rockwell
+        font-size: 1em
+        line-height: 1.3
+      a
+        text-decoration: underline
+
+.content-images
+  padding-top: 2em
+  &-tabs
+    margin-bottom: 2em
+  &-title
+    margin-bottom: 1em
+    display: inline-block
+    @extend %rockwell
+    font-size: 1em
+    b
+      color: #8d6042
+      @extend %gilroy
+  &-wrap
+    display: grid
+    grid-gap: 1em
+    img
+      max-width: 100%
+      @media screen and (min-width: 1024px)
+        margin: 0 auto
+        max-width: 80%
+        display: block
+    [data-fancybox]
+      cursor: pointer
+    &.grid-2
+      grid-template-columns: repeat(2, 1fr)
+    &.grid-4
+      grid-template-columns: repeat(4, 1fr)
+
+.whatinprice
+  padding-top: 3.75em
+  position: relative
+  &-title
+    @extend %rockwell
+    font-size: 1.7em
+    line-height: 1.47
+    font-weight: 400
+  &-tabs
+    margin-top: 2.9em
+  &-list
+    margin-top: 1.55em
+    display: grid
+    grid-gap: 3em
+    grid-template-columns: 1fr 1fr
+    &-item
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: 15.8088%
+        left: 3.0615%
+        z-index: -1
+        width: 93.8709%
+        height: 80.5147%
+        box-shadow: 0 0.5em 2.25em rgba(#000, 0.07)
+      .wrap
+        padding: 1.1em 1em 1.2em 1.4em
+        height: 100%
+        background-color: #fff
+        border: 1px solid #f7f7f7
+        border-radius: 10px
+        @media screen and (min-width: 1921px)
+          border-radius: 0.5em
+        .title
+          display: flex
+          align-items: center
+          min-height: 3em
+          img
+            margin-right: 1.5em
+            height: 2.5em
+          span
+            @extend %rockwell
+            font-size: 1em
+            line-height: 1.5
+        .text
+          margin-top: 1.5em
+          color: #8e6042
+          font-size: 0.8em
+          font-weight: 500
+          line-height: 1.75
+          letter-spacing: 0.025em
+  &-btn
+    margin-top: 3em
+
+.other
+  padding-top: 5.45em
+  &-title
+    @extend %rockwell
+    font-size: 1.7em
+    line-height: 1.47
+    font-weight: 400
+  &-list
+    margin-top: 2.95em
+    &-item
+      display: inline-grid !important
+      grid-gap: 3em
+      grid-template-columns: 1fr 1fr
+  &-controls
+    margin-top: 2.95em
+
+@media screen and (max-width: 768px)
+  .project-structure
+    &-top
+      .left
+        .share
+          margin-left: 1em
+    &-images
+      &-grid
+        grid-template-areas: "a a" "b c"
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: 15.25em 9.1666em
+        grid-gap: 1.5em
+  .params
+    &-list
+      grid-template-columns: repeat(2, minmax(auto, 1fr))
+      grid-row-gap: 1.5em
+  .content-images
+    &-wrap
+      grid-gap: 1.5em
+      &.grid-4
+        grid-template-columns: repeat(2, 1fr)
+  .whatinprice
+    &-list
+      grid-template-columns: 1fr
+      grid-gap: 1.5em
+  .other
+    &-list
+      &-item
+        grid-template-columns: 1fr
+
+@media screen and (max-width: 425px)
+  .project-structure
+    &-top
+      margin-top: 0
+      display: block
+      .left
+        display: block
+        text-align: center
+        position: relative
+        > .share-wrap
+          display: none
+        .title
+          font-size: 2.5em
+          display: inline-flex
+          align-items: center
+          .share
+            margin-left: 0.5em
+            display: inline-block
+            line-height: 0
+            &-wrap
+              position: static
+            &-btns
+              position: absolute
+              top: 100%
+              left: 50%
+              margin-left: 0
+              margin-top: 0.4em
+              transform: translateX(-50%)
+            img
+              height: 1em
+        .name
+          font-size: 1.833em
+          line-height: 1.272
+      .right
+        display: none
+    &-images
+      margin-top: 4.166em
+      &-grid
+        grid-gap: 2.5em
+    &-price
+      margin-top: 2.5em
+      display: block
+      text-align: center
+      .price
+        margin-bottom: 1em
+        font-family: Rockwell, sans-serif
+        font-size: 1.5em
+        b
+          font-size: 1.666em
+          font-weight: 400
+          letter-spacing: 0.025em
+    &-controls
+      margin-top: 4.166em
+  .params
+    padding-top: 4.166em
+    &-wrap
+      padding: 1em 1.666em 1.666em
+      .title
+        font-size: 1.833em
+        line-height: 1.272
+    &-list
+      margin-top: 2.5em
+      grid-template-columns: 1fr
+      grid-gap: 2.5em
+      &-item
+        img
+          margin-right: 2.5em
+          width: 3.166em
+          height: auto
+        .name
+          font-size: 1.25em
+          line-height: 1.333
+        .text
+          font-size: 1.833em
+          line-height: 1.272
+  .content-images
+    &-wrap
+      grid-gap: 2.5em
+      &.grid-2
+        grid-template-columns: 1fr
+      &.grid-4
+        grid-template-columns: 1fr
+  .whatinprice
+    padding-top: 5.833em
+    &-title
+      font-size: 2.5em
+      line-height: 1.333
+      text-align: center
+    &-list
+      margin-top: 1em
+      grid-gap: 2.5em
+      &-item
+        .wrap
+          padding: 1.166em 1.666em 1.666em
+          .title
+            min-height: auto
+            img
+              // margin-top: -1em
+              margin-right: 1.166em
+            span
+              font-size: 1.833em
+              line-height: 1.272
+          .text
+            font-size: 1.25em
+            line-height: 1.333
+            letter-spacing: 0.02em
+    &-btn
+      margin-top: 4.166em
+      text-align: center
+  .other
+    padding-top: 5.833em
+    &-title
+      font-size: 2.5em
+      line-height: 1.333
+      text-align: center
+    &-list
+      margin-top: 4.166em
+      &-item
+        grid-gap: 2.5em
+    &-controls
+      margin-top: 4.166em

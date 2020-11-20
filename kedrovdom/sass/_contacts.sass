@@ -1,0 +1,108 @@
+.contacts
+  padding-bottom: 5.9em
+  position: relative
+  background-image: url(../img/contacts-pen-letter.png)
+  background-position: right center
+  background-repeat: no-repeat
+  // background-size: 24.7em auto
+  background-size: 25.72916vw auto
+  @media screen and (max-width: 1750px)
+    background-position: top right
+  @media screen and (max-width: 768px)
+    background-position: bottom 0% right -10%
+    background-size: 40vw
+  @media screen and (max-width: 425px)
+    background-position: bottom -1% right -13%
+    background-size: 50vw
+  h1
+    margin: 1.470em 0 0
+    @extend %rockwell
+    font-size: 1.7em
+    font-weight: 400
+  p
+    margin: 1.687em 0 0
+    color: #8e6042
+    font-size: 0.8em
+    font-weight: 500
+    line-height: 1.75
+    letter-spacing: 0.025em
+  &-row
+    margin-top: 2.75em
+    display: flex
+    &-item
+      padding-top: 0.2em
+      display: flex
+      width: 33.333%
+      &:nth-child(2)
+        justify-content: center
+        border-left: 1px solid #efefef
+        border-right: 1px solid #efefef
+      &:nth-child(3)
+        justify-content: flex-end
+      .image
+        text-align: center
+        img
+          height: 1.1em
+      a
+        display: block
+        font-size: 0.8em
+        font-weight: 500
+        text-align: center
+      .map
+        .image
+          margin-bottom: 1.25em
+      .phone
+        .image
+          margin-bottom: 1.1em
+        .number
+          @extend %rockwell
+          font-weight: 400
+          letter-spacing: -0.05em
+        .callme
+          margin-top: 0.58em
+          color: #8e6042
+          font-size: 12px
+          font-weight: 700
+          letter-spacing: 0.05em
+          text-decoration: underline
+          @media screen and (min-width: 1921px)
+            font-size: 0.6em
+      .email
+        .image
+          margin-bottom: 1.25em
+
+@media screen and (max-width: 768px)
+  .contacts
+    h1
+      margin-top: 0
+    &-row
+      flex-wrap: wrap
+      &-item
+        width: 50%
+        &:nth-child(2)
+          border: none
+          justify-content: flex-end
+        &:nth-child(3)
+          margin-top: 4.166em
+          width: 100%
+          justify-content: center
+        a
+          font-size: 1.25em
+        .image img
+          height: 1.833em
+        .phone
+          .callme
+            font-size: 1em
+
+@media screen and (max-width: 425px)
+  .contacts
+    h1
+      font-size: 2.5em
+      text-align: center      
+    p
+      margin-top: 2.272em
+      font-size: 1.833em
+      line-height: 1.272
+      text-align: center
+    &-row
+      margin-top: 4.166em

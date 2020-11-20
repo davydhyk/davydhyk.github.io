@@ -1,0 +1,103 @@
+.inprice
+  .modal-content
+    max-width: 38.75em
+    padding: 2.05em 2.25em
+    background-image: url(../img/paper.png)
+    background-repeat: no-repeat
+    background-position: top 91.8% right
+    background-size: 15.55em
+    @media screen and (max-width: 804px)
+      padding: 5.09316vw 5.59006vw
+      background-image: none
+      background-position: top 66% right
+      background-size: 36vw
+    @media screen and (max-width: 700px)
+      background-position: top 55% right
+      background-size: 30.13333vw
+  &-list
+    margin-top: 1.35em
+    margin-bottom: 1.15em
+    &-item
+      display: flex
+      border-top: 1px solid #efefef
+      &:first-child
+        border-top-color: rgba(#000, 0)
+      > div
+        padding: 0.9375em 0.75em
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #8e6042
+        font-size: 0.6em
+        font-weight: 500
+        letter-spacing: 0.025em
+        text-align: center
+      .name
+        flex: 0 0 30%
+      .desc
+        flex-grow: 1
+        border-left: 1px solid #efefef
+        &.alone
+          border-left: none
+          justify-content: flex-start
+  .input
+    margin-top: 1.5em
+    margin-bottom: 1.55em
+    max-width: 19.6em
+    display: block
+  &-btn
+    margin-bottom: 1.45em
+    input
+      display: none
+
+.outprice
+  &-list
+    margin-top: 1.4em
+    margin-bottom: 1.25em
+    position: relative
+    img
+      width: 30.13333vw
+      display: none
+      position: absolute
+      top: 50%
+      right: -5.59006vw
+      transform: translateY(-50%)
+      @media screen and (max-width: 804px)
+        display: block
+      @media screen and (max-width: 600px)
+        right: -5vw
+    > div
+      margin-bottom: 1.167em
+      color: #8e6042
+      font-size: 0.6em
+      font-weight: 500
+      letter-spacing: 0.025em
+
+@media screen and (max-width: 600px)
+  .inprice
+    .modal-content
+      padding: 4vw 5vw 3.83vw
+    .title
+      max-width: 90%
+    &-list
+      margin-top: 0.75em
+      &-item
+        display: block
+        padding-top: 10px
+        padding-bottom: 15px
+        > div
+          padding: 0
+          display: block
+          text-align: left
+        .name
+          font-family: Rockwell
+          color: #3b3b3b
+          font-size: 16px
+        .desc
+          margin-top: 10px
+          font-size: 15px
+          border: none
+  .outprice
+    &-list
+      > div
+        font-size: 15px

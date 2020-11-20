@@ -1,0 +1,286 @@
+.service
+  background-size: cover
+  background-position: center
+  @media screen and (min-width: 1700px)
+    padding-top: 7.75em
+  h1
+    margin: 1.411em 0 0
+    @extend %rockwell
+    font-size: 1.7em
+    line-height: 1.47
+    font-weight: 400
+  p
+    font-size: 0.8em
+    font-weight: 500
+    line-height: 1.75
+    letter-spacing: 0.025em
+  .container > p
+    margin: 1.5625em 0 0
+    color: #8e6042
+  &-btn
+    margin-top: 2.75em
+    position: relative
+    z-index: 1
+  &-text
+    margin-top: 3em
+    padding: 1.35em 1.5em 1.15em
+    width: 60.1%
+    background-color: #fff
+    border-top-left-radius: 10px
+    border-top-right-radius: 10px
+    position: relative
+    z-index: 1
+    @media screen and (min-width: 1921px)
+      border-top-left-radius: 0.5em
+      border-top-right-radius: 0.5em
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      z-index: -1
+      width: 100%
+      height: 100%
+      box-shadow: 0 0.5em 2.25em rgba(0, 0, 0, 0.07)
+    p
+      margin: 0
+  &-desc
+    position: relative
+    &-row
+      display: flex
+      align-items: flex-end
+    .point
+      &-wrap
+        align-self: flex-start
+        flex: 0 0 60.1%
+        background-color: #fff
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+        position: relative
+        z-index: 1
+        @media screen and (min-width: 1921px)
+          border-bottom-left-radius: 0.5em
+          border-bottom-right-radius: 0.5em
+        &::before
+          content: ''
+          position: absolute
+          left: 0
+          top: 1.75em
+          bottom: 0
+          z-index: -1
+          width: 100%
+          box-shadow: 0 0.5em 2.25em rgba(0, 0, 0, 0.07)
+          border-bottom-left-radius: 10px
+          border-bottom-right-radius: 10px
+          @media screen and (min-width: 1921px)
+            border-bottom-left-radius: 0.5em
+            border-bottom-right-radius: 0.5em
+      &-list
+        padding: 2.2em 1.5em 1.25em
+        background-color: #fff
+        // display: flex
+        // justify-content: space-between
+        // flex-wrap: wrap
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+        position: relative
+        top: 1px
+        display: grid
+        grid-template-columns: repeat(2, minmax(42.5%, auto))
+        grid-row-gap: 1.05em
+        grid-column-gap: 0.5em
+        align-items: center
+        @media screen and (min-width: 1921px)
+          border-bottom-left-radius: 0.5em
+          border-bottom-right-radius: 0.5em
+        &::before
+          content: ''
+          padding: 0 1.5em
+          position: absolute
+          top: 0
+          left: 0
+          height: 1px
+          width: 100%
+          background-color: #efefef
+          background-clip: content-box
+        &-item
+          // margin-bottom: 1.05em
+          // min-width: 42.5%
+          .item-wrap
+            padding-left: 1.8em
+            display: inline-flex
+            align-items: center
+            position: relative
+            cursor: pointer
+            &:hover
+              .hover
+                opacity: 1
+              span
+                color: #8d6042
+              .title
+                visibility: visible
+                opacity: 1
+          img
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            height: 0.9em
+          .hover
+            opacity: 0
+            transition: 0.2s
+          span
+            color: #919191
+            font-size: 0.8em
+            font-weight: 600
+            line-height: 1.75
+            letter-spacing: 0.025em
+            transition: 0.2s
+          .title
+            visibility: hidden
+            opacity: 0
+            transition: 0.2s
+            padding: 0.857em 0.928em 0.857em 1.214em
+            width: 14.5em
+            position: absolute
+            left: 1em
+            top: 50%
+            z-index: 1
+            transform: translateY(-50%)
+            color: #8c6042
+            font-size: 0.7em
+            line-height: 1.428
+            letter-spacing: 0.02em
+            background-color: #fff
+            border-radius: 10px
+            box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.1)
+            @media screen and (min-width: 1921px)
+              border-radius: 0.714em
+            &::before
+              content: ''
+              position: absolute
+              top: 50%
+              left: -0.714em
+              width: 0
+              height: 0
+              border-right: 0.857em solid #fff
+              border-top: 0.35em solid rgba(#fff, 0)
+              border-bottom: 0.35em solid rgba(#fff, 0)
+              transform: translateY(-50%) rotate(180deg) scaleX(-1.1)
+            &-wrap
+              position: relative
+    .price
+      flex-grow: 1
+      text-align: center
+      &.row
+        @media screen and (min-width: 426px)
+          padding-top: 1.5em
+          display: flex
+          align-items: center
+          justify-content: center
+          > div
+            margin: 0
+          .number
+            margin: 0 1.35em
+      .from
+        color: #919191
+        font-size: 0.8em
+        font-weight: 600
+        line-height: 1.75
+        letter-spacing: 0.025em
+      .number
+        margin-top: 0.85em
+        @extend %rockwell
+        font-size: 1em
+        b
+          font-size: 1.5em
+          font-weight: 400
+      .button
+        margin-top: 1.55em
+
+@media screen and (max-width: 768px)
+  .service
+    background-position: left 40% center
+    h1
+      margin-top: 0
+    &-text
+      width: 100%
+    &-desc
+      &-row
+        display: block
+      .point
+        &-wrap
+          width: 100%
+        &-list
+          &-item
+            position: relative
+            .item-wrap
+              pointer-events: none
+            .title
+              top: 130%
+              left: 10%
+              transform: none
+              &::before
+                top: -0.714em
+                left: 10%
+                transform: rotate(270deg) scaleX(-1.1)
+              &-wrap
+                position: static
+      .price
+        .from
+          display: none
+        .number
+          margin-top: 2em
+
+@media screen and (max-width: 425px)
+  .service
+    background-position: left 34% center
+    h1
+      font-size: 2.5em
+      line-height: 1.333
+      text-align: center
+    .container > p
+      margin-top: 1em
+      font-size: 1.833em
+      line-height: 1.272
+      text-align: center
+    &-btn
+      margin-top: 4.166em
+      text-align: center
+    &-text
+      margin-top: 4.166em
+      padding: 1.666em
+      p
+        font-size: 1.25em
+        line-height: 1.333
+        letter-spacing: 0.02em
+    &-desc
+      .point
+        &-list
+          padding: 1.666em
+          grid-template-columns: 1fr
+          grid-row-gap: 1.25em
+          &-item
+            .item-wrap
+              padding-left: 2.916em
+            img
+              height: 1.416em
+            span
+              font-size: 1.25em
+              font-weight: 600
+              line-height: 1.333
+              letter-spacing: 0.02em
+            .title
+              top: 150%
+              left: 20%
+              font-size: 1.166em
+              font-weight: 500
+      .price
+        margin-top: 2.5em
+        .number
+          margin-top: 0
+          font-size: 1.5em
+          b
+            font-size: 1.666em
+        .button
+          margin-top: 1.666em

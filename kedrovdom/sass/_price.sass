@@ -1,0 +1,186 @@
+.price
+  position: relative
+  h1
+    margin: 1.382em 0 0
+    @extend %rockwell
+    font-size: 1.7em
+    line-height: 1.47
+    font-weight: 400
+  &-tabs
+    margin-top: 2.9em
+  &-img
+    position: absolute
+    right: 0
+    bottom: -1.35em
+    z-index: 2
+    @media screen and (max-width: 1800px)
+      display: none
+    img
+      width: 20.6em
+  &-list
+    margin-top: 1.5em
+    &-item
+      display: block
+      width: 100%
+      position: relative
+      transition: 0.2s
+      .wrap
+        display: flex
+        min-height: 5em
+        border-top: 1px solid #eee
+        background-color: #fff
+        transition: 0.2s
+        position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 0
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(#000, 0.1) 48%, rgba(0, 0, 0, 0) 100%)
+        transition: 0.2s
+      &:first-child .wrap
+        border-top: none
+      .title
+        padding: 0 1.1em 0 1.2em
+        display: flex
+        align-items: center
+        flex: 0 0 33.333%
+        .image
+          flex: 0 0 2.9em
+          margin-right: 2.3em
+          line-height: 0
+          text-align: center
+          img
+            height: 1.5em
+        span
+          @extend %rockwell
+          font-size: 1em
+          line-height: 1.5
+      .desc
+        flex: 0 0 37.5%
+        padding: 1em 2em 1em 2.5em
+        display: flex
+        align-items: center
+        color: #8e6042
+        font-size: 0.8em
+        font-weight: 500
+        line-height: 1.75
+        letter-spacing: 0.025em
+        border-left: 1px solid #eee
+        border-right: 1px solid #eee
+        transition: 0.2s
+      .price
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-grow: 1
+        @extend %rockwell
+        font-size: 1em
+        line-height: 1.5
+        span
+          min-width: 7.15em
+        b
+          font-size: 1.5em
+          font-weight: 400
+          line-height: 1
+      &:hover
+        z-index: 1
+        .wrap
+          border-color: rgba(0, 0, 0, 0)
+        &::before
+          top: 0.75em
+          filter: blur(1.75em)
+        .desc
+          border-color: rgba(0, 0, 0, 0)
+      &:hover + & .wrap
+        border-color: rgba(0, 0, 0, 0)
+    &-btn
+      margin-top: 3em
+
+@media screen and (max-width: 768px)
+  .price
+    h1
+      margin-top: 0
+      text-align: center
+    &-list
+      display: flex
+      flex-wrap: wrap
+      &-item
+        width: 50%
+        &:nth-child(2) .wrap
+          border-top-color: rgba(#000, 0)
+        &:hover + &
+          .wrap
+            border-top-color: #eee
+        &:hover + & + &
+          .wrap
+            border-top-color: rgba(#000, 0)
+        .wrap
+          padding: 1.5em
+          display: block
+          height: 100%
+        .title
+          padding: 0
+          display: block
+          text-align: center
+          .image
+            margin-right: 0
+            margin-bottom: 0.5em
+        .desc
+          margin: 1em 0
+          padding: 0
+          border: none
+          text-align: center
+        .price
+          span
+            min-width: auto
+      &-btn
+        margin-top: 2em
+        text-align: center
+
+@media screen and (max-width: 425px)
+  .price
+    h1
+      font-size: 2.5em
+      line-height: 1.333
+    &-tabs
+      margin-top: 4.166em
+    &-list
+      margin-top: 0.83em
+      display: block
+      &-item
+        width: 100%
+        &:nth-child(2) .wrap
+          border-top-color: #eee
+        &:hover
+          .wrap
+            border-top-color: rgba(#000, 0)
+        &:hover + &
+          .wrap
+            border-top-color: rgba(#000, 0)
+        &:hover + & + &
+          .wrap
+            border-top-color: #eee
+        .wrap
+          padding: 2.5em 1em
+        .title
+          span
+            font-size: 1.833em
+            line-height: 1.272
+          .image
+            margin-bottom: 0.66em
+            img
+              height: 2.5em
+        .desc
+          font-size: 1.25em
+          line-height: 1.333
+        .price
+          font-size: 1.5em
+          span
+            b
+              font-size: 1.666em
+      &-btn
+        margin-top: 4.166em

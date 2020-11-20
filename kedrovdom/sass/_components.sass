@@ -1,0 +1,565 @@
+.itmaestro
+  margin-top: 1.042em
+  font-weight: 500
+  font-size: 0.8em
+  color: #3b3b3b
+  a
+    color: #815437
+    font-weight: 700
+    line-height: 2.142
+  &.mob
+    display: none
+    @media screen and (max-width: 768px)
+      display: block
+      width: 100%
+      margin-top: 0
+      text-align: center
+      a
+        line-height: 1
+
+.scrollTop
+  font-size: 2em
+  position: fixed
+  bottom: 5%
+  right: 1em
+  z-index: 3
+  width: 1em
+  height: 1em
+  border-radius: 50%
+  transition: 0.2s
+  cursor: pointer
+  @media screen and (max-width: 1024px)
+    display: none
+  img
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 100%
+    height: 100%
+    transform: translate(-50%, -50%)
+    transition: 0.2s
+    &.hover
+      z-index: 1
+      opacity: 0
+  &.hidden
+    visibility: hidden
+    opacity: 0
+  &:hover
+    box-shadow: 0px 0.25em 0.416em rgba(#825538, 0.45)
+    img
+      &.default
+        opacity: 0
+      &.hover
+        opacity: 1
+
+@media screen and (min-width: 1700px)
+  .branch
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      z-index: -1
+      width: 14.16666vw
+      height: 23.28125vw
+      background-image: url(../img/branch-left.png)
+      background-size: cover
+    &.left::before
+      left: 0
+    &.right::before
+      right: 0
+      transform: scaleX(-1)
+
+@media screen and (min-width: 1700px)
+  .big-branch
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      z-index: -1
+      width: 16.82291vw
+      height: 29.01041vw
+      background-image: url(../img/big-branch.png)
+      background-size: cover
+    &.left::before
+      left: 0
+      transform: scaleX(-1) translateY(-28%)
+    &.right::before
+      right: 0
+      transform: translateY(-28%)
+
+@media screen and (min-width: 1700px)
+  .small-branch
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      z-index: -1
+      width: 10.625vw
+      height: 15.625vw
+      background-image: url(../img/small-branch.png)
+      background-size: cover
+    &.left::before
+      left: 0
+    &.right::before
+      right: 0
+      transform: scaleX(-1)
+
+.btn
+  padding: 1.416em 2.333em
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  color: #fff
+  font-size: 0.6em
+  font-weight: 700
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  border-radius: 0.8334em
+  background-image: linear-gradient(251deg, #8d6042 0%, #72462a 100%)
+  position: relative
+  z-index: 1
+  cursor: pointer
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    z-index: -1
+    left: 6%
+    width: 88%
+    height: 1em
+    position: absolute
+    transition: 0.2s
+  &:hover::before
+    box-shadow: 0 0.41em 2.916em #8b5f41
+@media screen and (max-width: 425px)
+  section *:not(.inprice-btn) > .btn
+    padding: 1.25em 2em
+    font-size: 1.166em
+    letter-spacing: 0
+
+.btn-trsp
+  padding: 1.375em 2.25em
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #fff
+  font-size: 0.6em
+  font-weight: 700
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  border-radius: 10px
+  border: 1px solid #fff
+  transition: 0.2s
+  @media screen and (min-width: 1921px)
+    font-size: 0.6em
+    border-radius: 0.833em
+  &:hover
+    background-color: rgba(#000, 0.2)
+@media screen and (max-width: 425px)
+  .btn-trsp
+    padding: 0.714em 1.071em
+    font-size: 1.166em
+    font-weight: 600
+    text-transform: none
+
+.breadcrumbs
+  padding-top: 1.5em
+  ul
+    margin: 0
+    padding: 0
+    display: flex
+    align-items: center
+    list-style: none
+    font-size: 20px
+    @media screen and (max-width: 768px)
+      display: none
+    li
+      color: #919191
+      font-size: 0.6em
+      font-weight: 500
+      letter-spacing: 0.025em
+      transition: 0.2s
+      &:hover
+        color: #8e6042
+      &:last-child
+        color: #8e6042
+      &:not(:first-child)
+        position: relative
+        margin-left: 1.416em
+        padding-left: 1.833em
+        &::before
+          content: ''
+          position: absolute
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+          width: 0.33em
+          height: 0.66em
+          background-image: url(../img/breadcrumbs-arr.svg)
+          background-size: 100% 100%
+
+.pagination
+  display: flex
+  align-items: center
+  justify-content: center
+  .page-numbers
+    margin: 0 0.625em
+    font-size: 0.8em
+    font-weight: 500
+    line-height: 1.75
+    letter-spacing: 0.025em
+    transition: 0.2s
+    &.current
+      color: #73472b
+      transform: scale(1.2)
+    &:hover
+      color: #73472b
+  .prev, .next
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    font-size: 1em
+    width: 2.15em
+    height: 2.15em
+    border: 1.5px solid #73472b
+    border-radius: 50%
+    background-image: url(../img/more-right.svg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 0.357em
+    &:hover
+      transform: scale(1.1)
+    &.disabled
+      pointer-events: none
+      filter: grayscale(1)
+      opacity: 0.7
+  .prev
+    margin-left: 0
+    margin-right: 1.6em
+    transform: rotate(180deg)
+    &:hover
+      transform: rotate(180deg) scale(1.1)
+  .next
+    margin-right: 0
+    margin-left: 1.6em
+
+@media screen and (max-width: 425px)
+  .pagination
+    font-size: 1.6666666em
+    .page-numbers
+      margin: 0 0.5em
+    .prev
+      margin-right: 1em
+    .next
+      margin-left: 1em
+
+.tab
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  &-btn
+    margin: 0 1.875em 1.875em
+    padding: 0.625em 1.875em
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    color: #919191
+    font-size: 0.8em
+    font-weight: 600
+    background-color: #eee
+    border-radius: 2.5em
+    transition: 0.2s
+    position: relative
+    &:hover
+      background-color: darken(#eee, 5%)
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      z-index: -1
+      left: 6%
+      width: 88%
+      height: 1em
+      border-radius: 100%
+      position: absolute
+      transition: 0.2s
+    &.active
+      color: #fff
+      background-color: #8d6042
+      &::before
+        box-shadow: 0 0.41em 2.916em #8b5f41
+  &-content
+    display: none
+    &.active
+      display: block
+@media screen and (max-width: 768px)
+  .tab
+    &-btn
+      &.active::before
+        box-shadow: 0 0.41em 2.3em #8b5f41
+@media screen and (max-width: 425px)
+  .tab
+    margin-left: -1.071em
+    margin-right: -1.071em
+    &-btn
+      margin: 0em 1.071em 2.142em
+      padding: 0.64em 1.428em
+      font-size: 1.166em
+
+.slick-slide
+  outline: none
+.slick-controls
+  display: flex
+  align-items: center
+  justify-content: center
+  @media screen and (max-width: 425px)
+    justify-content: space-between
+  .slick-arrow
+    margin: 0 0.95em
+    width: 1.5em
+    height: 1.5em
+    font-size: 20px
+    border: 1.5px solid #73472B
+    border-radius: 50%
+    background-image: url(../img/more-right.svg)
+    background-position: center
+    background-size: 0.25em auto
+    background-repeat: no-repeat
+    cursor: pointer
+    transition: 0.2s
+    @media screen and (min-width: 1921px)
+      font-size: 1em
+    &:hover
+      transform: scale(1.1)
+    &.big
+      margin: 0
+      width: 2.15em
+      height: 2.15em
+      background-size: 0.35em auto
+      &.prev
+        margin-right: 3em
+        @media screen and (max-width: 768px)
+          margin-right: 1em
+        @media screen and (max-width: 425px)
+          margin: 0
+      &.next
+        margin-left: 3em
+        @media screen and (max-width: 768px)
+          margin-left: 1em
+        @media screen and (max-width: 425px)
+          margin: 0
+    &.prev
+      transform: rotate(180deg)
+      &:hover
+        transform: rotate(180deg) scale(1.1)
+  .slick-dots
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    align-items: center
+    font-size: 20px
+    @media screen and (min-width: 1921px)
+      font-size: 1em
+    li
+      margin: 0 0.45em
+      width: 0.6em
+      height: 0.6em
+      padding: 0.075em
+      opacity: 0.3
+      border-radius: 50%
+      background-color: #8f6042
+      background-clip: content-box
+      transition: 0.2s
+      cursor: pointer
+      @media screen and (max-width: 425px)
+        margin: 0 0.25em
+      &.slick-active
+        opacity: 1
+        background-clip: padding-box
+      &:hover
+        opacity: 1
+
+.seo-text
+  margin-top: 2.65em
+  .title
+    margin-bottom: 0.9642857em
+    @extend %rockwell
+    font-size: 1.4em
+  p
+    margin: 0 0 1.75em
+    font-size: 0.8em
+    font-weight: 500
+    letter-spacing: 0.025em
+    line-height: 1.75
+    &:last-child
+      margin-bottom: 0
+@media screen and (max-width: 425px)
+  .seo-text
+    margin-top: 3.333em
+    .title
+      font-size: 1.833em
+      line-height: 1.272
+    p
+      font-size: 1.25em
+      line-height: 1.333
+
+.modal
+  padding: 15px
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10
+  width: 100%
+  height: 100%
+  text-align: center
+  overflow: auto
+  font-size: 0
+  white-space: nowrap
+  visibility: hidden
+  opacity: 0
+  transition: 0.3s
+  &.active, &.active &-overlay
+    visibility: visible
+    opacity: 1
+  &::before
+    content: ""
+    display: inline-block
+    font-size: 0
+    height: 100%
+    vertical-align: middle
+    width: 0
+  &-overlay
+    visibility: hidden
+    opacity: 0
+    transition: 0.3s
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(#000, 0.5)
+  &-content
+    font-size: 20px
+    position: relative
+    z-index: 1
+    display: inline-block
+    vertical-align: middle
+    text-align: left
+    width: 100%
+    background-color: #fff
+    border-radius: 10px
+    white-space: normal
+    // box-shadow: 0 0.75em 1.75em rgba(#000, 0.05)
+    @media screen and (min-width: 1921px)
+      font-size: 1.041667vw
+      border-radius: 0.5em
+    @media screen and (max-width: 375px)
+      font-size: 5.33333vw
+  .title
+    @extend %rockwell
+    font-size: 1em
+  .close
+    position: absolute
+    top: 0.5em
+    right: 0.5em
+    cursor: pointer
+    line-height: 0
+    img
+      width: 0.8em
+      transition: 0.2s
+    &:hover img
+      transform: scale(1.1)
+  label
+    > span
+      display: block
+      position: relative
+      span
+        position: absolute
+        bottom: 0
+        transform: translateY(110%)
+        font-size: 10px
+  input, textarea
+    outline: none
+    appearance: none
+    padding-left: 1.1875em
+    padding-right: 1.1875em
+    width: 100%
+    @extend %gilroy
+    font-size: 0.8em
+    font-weight: 500
+    border: 1px solid rgba(#8D6042, 0.25)
+    letter-spacing: 0.025em
+    border-radius: 0.625em
+    &::placeholder
+      opacity: 0.3
+  input
+    height: 3.125em
+  textarea
+    padding-top: 0.687em
+    padding-bottom: 0.687em
+    height: 11.25em
+    line-height: 1.75
+    resize: none
+  .warn
+    font-size: 10px
+    font-weight: 500
+    line-height: 1.5
+    letter-spacing: 0.025em
+    opacity: 0.3
+    @media screen and (min-width: 1921px)
+      font-size: 0.5em
+    @media screen and (max-width: 600px)
+      font-size: 0.75em
+
+.share
+  &.active ~ &-btns
+    visibility: visible
+    opacity: 1
+  &-wrap
+    position: relative
+    line-height: 0
+  &-btns
+    visibility: hidden
+    opacity: 0
+    transition: 0.2s
+    margin-left: 1em
+    font-size: 20px
+    position: absolute
+    top: 50%
+    left: 100%
+    z-index: 1
+    padding: 0.25em
+    background-color: #fff
+    transform: translateY(-50%)
+    border-radius: 1em
+    @media screen and (max-width: 768px)
+      font-size: 16px
+    .at-resp-share-element
+      font-size: 1em
+    .at-share-btn-elements
+      display: flex
+      > a
+        margin: 0 5px 0 0
+        padding: 0.25em
+        .at-icon-wrapper
+          width: 1em !important
+          height: 1em !important
+          line-height: 1em !important
+          svg
+            width: 1em !important
+            height: 1em !important
+
+#at20mc
+  #at15s .at-icon-wrapper
+    background-color: #815437 !important
+  #at_hover.atm-s .at_bold
+    color: #815437 !important
+  #at_hover.atm-s a, .atm-s a
+    color: #815437 !important
+  #at15pf
+    display: none !important
+  #at_hover.atm-s a:hover, .atm-s a:hover
+    background-color: #eee !important

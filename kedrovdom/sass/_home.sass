@@ -1,0 +1,71 @@
+.home
+  padding-top: 4.35em
+  padding-bottom: 11em
+  background-image: url(../img/home-bg1.svg)
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  @media screen and (min-width: 1700px)
+    background-image: url(../img/home-bg.svg)
+    padding-top: 12.1em
+  &-tags
+    color: #8e6042
+    font-size: 12px
+    font-weight: 700
+    line-height: 1.25
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    @media screen and (min-width: 1921px)
+      font-size: 0.6em
+  h1
+    margin: 0.325em 0 0
+    @extend %rockwell
+    font-size: 2em
+    font-weight: 400
+    line-height: 1.65
+  p
+    margin: 1.25em 0 3.437em
+    color: #8e6042
+    font-size: 0.8em
+    font-weight: 500
+    line-height: 1.75
+    letter-spacing: 0.025em
+  &-btn
+    padding-bottom: 2em
+
+@media screen and (min-width: 1700px)
+  .home
+    padding-bottom: calc(100vh - 26.65em - 7.65em)
+
+@media screen and (min-width: 1024.01px) and (max-width: 1699.99px)
+  .home
+    padding-bottom: calc(100vh - 26.65em - 155px)
+
+@media screen and (max-width: 1024px)
+  .home
+    padding-top: 2em
+    background-position: left 40% center
+
+@media screen and (max-width: 425px)
+  .home
+    padding-top: 2.5em
+    padding-bottom: 26.833em
+    background-image: url(../img/home-bg-mob.svg)
+    background-size: auto 35.916em
+    background-position: bottom center
+    text-align: center
+    &-tags
+      font-size: 1.25em
+    h1
+      margin-top: 0.5em
+      font-size: 2.5em
+      line-height: 1.333
+      br
+        display: none
+    p
+      margin-top: 0.909em
+      margin-bottom: 2.272em
+      font-size: 1.833em
+      line-height: 1.272
+      br
+        display: none

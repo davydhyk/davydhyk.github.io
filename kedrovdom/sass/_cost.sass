@@ -1,0 +1,177 @@
+.cost
+  padding-top: 2.85em
+  position: relative
+  &-img
+    width: 20.6em
+    line-height: 0
+    position: absolute
+    right: 0
+    bottom: -0.7em
+    z-index: 3
+    @media screen and (max-width: 1800px)
+      display: none
+    img
+      width: 100%
+  &-title
+    @extend %rockwell
+    font-size: 1.7em
+    line-height: 1.47
+  &-list
+    margin-top: 3em
+  &-item
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 100%)
+      transition: 0.2s
+    .wrap
+      min-height: 3.125em
+      display: flex
+      color: #8e6042
+      font-size: 0.8em
+      font-weight: 500
+      line-height: 1.75
+      letter-spacing: 0.025em
+      text-align: center
+      border-top: 1px solid #eee
+      background-color: #fff
+      position: relative
+      z-index: 1
+      transition: 0.2s
+      > div
+        padding: 0.5em 0.5em
+        display: flex
+        align-items: center
+        justify-content: center
+    &:first-child .wrap
+      border-top: none
+    &:hover
+      z-index: 2
+      &::before
+        filter: blur(1.75em)
+        top: 0.75em
+      .wrap
+        border-color: rgba(0, 0, 0, 0)
+        .desc
+          border-color: rgba(0, 0, 0, 0)
+    &:hover + & .wrap
+      border-color: rgba(0, 0, 0, 0)
+    .title
+      flex: 0 0 33.333%
+    .desc
+      flex: 0 0 33.333%
+      border-left: 1px solid #eee
+      border-right: 1px solid #eee
+      transition: 0.2s
+    .price
+      flex: 0 0 33.333%
+  &-btn
+    margin-top: 2.95em
+
+@media screen and (max-width: 1440px)
+  .cost
+    &-item
+      .wrap
+        > div
+          padding: 0.5em 1em
+        .title
+          flex: 0 0 25%
+        .desc
+          flex: 0 0 50%
+        .price
+          flex: 0 0 25%
+
+@media screen and (max-width: 1024px)
+  .cost
+    &-item
+      &::before
+        display: none
+      &:hover
+        border-color: #eee
+        .wrap
+          border-color: #eee
+          .desc
+            border-color: #eee
+      &:hover + & .wrap
+        border-color: #eee
+
+@media screen and (max-width: 768px)
+  .cost
+    &-list
+      margin-top: 1.5em
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+    &-item
+      width: 50%
+      text-align: center
+      &:nth-child(2) .wrap
+        border-color: rgba(#000, 0)
+      .wrap
+        padding: 1.5em
+        display: block
+        > div
+          padding: 0
+        .title
+          margin-bottom: 0.625em
+          color: #3b3b3b
+          font-family: Rockwell, sans-serif
+          font-size: 1.2em
+        .desc
+          border: none
+        .price
+          margin-top: 0.375em
+          color: #3b3b3b
+          font-family: Rockwell, sans-serif
+          font-size: 2em
+    &-btn
+      margin-top: 1.5em
+
+@media screen and (max-width: 425px)
+  .cost
+    &-title
+      font-size: 2.5em
+      line-height: 1.333
+      text-align: center
+    &-list
+      margin-top: 4.166em
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+    &-item
+      width: 100%
+      text-align: center
+      &:nth-child(2) .wrap
+        border-color: #eee
+      .wrap
+        padding: 1.916em
+        display: block
+        > div
+          padding: 0
+        .title
+          margin-bottom: 0.681em
+          color: #3b3b3b
+          font-family: Rockwell, sans-serif
+          font-size: 1.833em
+          line-height: 1.318
+        .desc
+          margin: 0 auto
+          max-width: 80%
+          font-size: 1.25em
+          font-weight: 500
+          line-height: 1.333
+          letter-spacing: 0.02em
+          border: none
+        .price
+          margin-top: 0.5em
+          color: #3b3b3b
+          font-family: Rockwell, sans-serif
+          font-size: 2.5em
+    &-btn
+      margin-top: 4.166em
+      text-align: center

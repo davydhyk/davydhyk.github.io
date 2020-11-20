@@ -1,0 +1,75 @@
+.prod
+  padding-top: 5.5em
+  position: relative
+  &-title
+    @extend %rockwell
+    font-size: 1.7em
+    line-height: 1.47
+  p
+    margin: 1.5625em 0 0
+    color: #8e6042
+    font-size: 0.8em
+    font-weight: 500
+    letter-spacing: 0.025em
+    line-height: 1.75
+  &-list
+    margin-top: 2.8em
+    &-item
+      outline: none
+      display: grid !important
+      grid-template-columns: 19.23% auto 19.23%
+      grid-gap: 3em
+      grid-template-rows: repeat(2, 10em)
+      grid-template-areas: "a c d" "b c e" 
+      > div
+        border-radius: 10px
+        background-size: cover
+        background-position: center
+        cursor: pointer
+        opacity: 0.5
+        transition: 0.2s
+        @media screen and (min-width: 1921px)
+          border-radius: 0.5em
+        &:hover
+          opacity: 1
+        &:nth-child(1)
+          grid-area: a
+        &:nth-child(2)
+          grid-area: b
+        &:nth-child(3)
+          grid-area: c
+          opacity: 1
+        &:nth-child(4)
+          grid-area: d
+        &:nth-child(5)
+          grid-area: e
+  &-controls
+    margin-top: 3em
+
+@media screen and (max-width: 768px)
+  .prod
+    &-list
+      &-item
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 9.166em 19em 9.166em
+        grid-template-areas: "a b" "c c" "d e"
+        grid-gap: 1.5em
+
+@media screen and (max-width: 425px)
+  .prod
+    padding-top: 5.833em
+    &-title
+      font-size: 2.5em
+      line-height: 1.333
+      text-align: center
+    p
+      margin-top: 0.909em
+      font-size: 1.833em
+      line-height: 1.272
+      text-align: center
+      br
+        display: none
+    &-list
+      margin-top: 4.166em
+      &-item
+        grid-gap: 2.5em

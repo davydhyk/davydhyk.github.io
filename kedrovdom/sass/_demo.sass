@@ -1,0 +1,139 @@
+.demo
+  padding-top: 5.45em
+  padding-bottom: 2.5em
+  &-row
+    display: flex
+    justify-content: space-between
+  &-text
+    .title
+      @extend %rockwell
+      font-size: 1.7em
+      line-height: 1.47
+    p
+      margin: 1.5625em 0 0
+      color: #8e6042
+      font-size: 0.8em
+      line-height: 1.75
+      letter-spacing: 0.025em
+    &-btn
+      margin-top: 2.75em
+      &-mob
+        display: none
+  &-video
+    margin-top: 0.55em
+    width: 47.7%
+    width: calc(50% - 1.5em)
+    height: 19em
+    background-size: cover
+    border-radius: 10px
+    position: relative
+    overflow: hidden
+    @media screen and (min-width: 1921px)
+      border-radius: 0.5em
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(#000, 0.2)
+    &-play
+      width: 4.5em
+      height: 4.5em
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      backdrop-filter: blur(2px)
+      border-radius: 50%
+      .circle
+        line-height: 0
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        transition: 0.2s
+        z-index: 1
+        cursor: pointer
+        &:hover ~ .play
+          transform: translate(-50%, -50%) scale(1.5)
+        &:hover ~ .curves
+          // transform: translate(-50%, -50%) rotate(245deg)
+          animation-play-state: paused
+          opacity: 0.8
+      .play
+        line-height: 0
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        transition: 0.8s
+      .curves
+        line-height: 0
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        transition: 0.8s
+        opacity: 0.3
+        animation: rotateCurves linear 3.2s infinite
+  &-grid
+    margin-top: 3em
+    display: grid
+    grid-gap: 3em
+    grid-template-columns: 1fr 1fr
+
+@media screen and (max-width: 768px)
+  .demo
+    padding-top: 3em
+    &-row
+      display: block
+    &-text
+      &-btn
+        margin-top: 1.5em
+    &-video
+      margin-top: 1.5em
+      width: 100%
+      height: 14.05em
+    &-grid
+      margin-top: 1.5em
+      grid-template-columns: 1fr
+      grid-gap: 1.5em
+
+@media screen and (max-width: 425px)
+  .demo
+    &-text
+      text-align: center
+      .title
+        font-size: 2.5em
+        line-height: 1.333
+      p
+        margin-top: 0.909em
+        font-size: 1.833em
+        font-weight: 500
+        line-height: 1.272
+        br
+          display: none
+      &-btn
+        display: none
+        &-mob
+          margin-top: 4.166em
+          display: block
+          text-align: center
+    &-video
+      margin-top: 4.166em
+      width: 100%
+      height: 20.303em
+    &-grid
+      margin-top: 2.5em
+      grid-template-columns: 1fr
+      grid-gap: 2.5em
+
+@keyframes rotateCurves
+  0%
+    transform: translate(-50%, -50%) rotate(0deg)
+  // 50%
+  //   transform: translate(-50%, -50%) 
+  100%
+    transform: translate(-50%, -50%) rotate(360deg)
